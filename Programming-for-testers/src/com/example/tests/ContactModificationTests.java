@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class ContactModificationTests extends TestBase{
 
 	@Test
-	public void ñontactModificationTests() {
+	public void contactModificationTests() {
     app.getNavigationHelper().openMainPage();
 	app.getContactHelper().initContactModification(1);
 	ContactData contact = new ContactData();
