@@ -23,8 +23,10 @@ Thumbs.db
 [Dd]ebug*/
 *.lib
 *.sbr
+.test-output
 obj/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
 .metadata
+test-output/
