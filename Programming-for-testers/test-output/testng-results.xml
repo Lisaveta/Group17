@@ -1,161 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="15" passed="15">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33008" started-at="2014-03-22T10:49:33Z" finished-at="2014-03-22T10:50:06Z">
+  <suite name="Default suite" duration-ms="14445" started-at="2014-03-23T06:41:35Z" finished-at="2014-03-23T06:41:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33008" started-at="2014-03-22T10:49:33Z" finished-at="2014-03-22T10:50:06Z">
-      <class name="com.example.tests.GroupRemovalTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupRemovalTests@9d3f8b]" name="setUp" is-config="true" duration-ms="5472" started-at="2014-03-22T17:49:33Z" finished-at="2014-03-22T17:49:39Z">
+    <test name="Default test" duration-ms="14445" started-at="2014-03-23T06:41:35Z" finished-at="2014-03-23T06:41:49Z">
+      <class name="com.example.tests.ContactCreationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="setUp" is-config="true" duration-ms="10416" started-at="2014-03-23T13:41:35Z" finished-at="2014-03-23T13:41:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deleteSomeGroup()[pri:0, instance:com.example.tests.GroupRemovalTests@9d3f8b]" name="deleteSomeGroup" duration-ms="1231" started-at="2014-03-22T17:49:54Z" finished-at="2014-03-22T17:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteSomeGroup -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupRemovalTests@9d3f8b]" name="tearDown" is-config="true" duration-ms="213" started-at="2014-03-22T17:50:06Z" finished-at="2014-03-22T17:50:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.GroupRemovalTests -->
-      <class name="com.example.tests.GroupCreationTests">
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@113c116]" name="testValidGroupCreationWishValidData" duration-ms="1443" started-at="2014-03-22T17:49:47Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=, header=test-188180922, footer=]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@113c116]" name="testValidGroupCreationWishValidData" duration-ms="1380" started-at="2014-03-22T17:49:49Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-2063076728, header=, footer=test1063467654]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@113c116]" name="testValidGroupCreationWishValidData" duration-ms="1346" started-at="2014-03-22T17:49:50Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-1341319760, header=test418689408, footer=test223710910]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@113c116]" name="testValidGroupCreationWishValidData" duration-ms="1446" started-at="2014-03-22T17:49:51Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test2056081690, header=test-117744595, footer=test275951450]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@113c116]" name="testValidGroupCreationWishValidData" duration-ms="1529" started-at="2014-03-22T17:49:53Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-1060322171, header=test685497616, footer=]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-      </class> <!-- com.example.tests.GroupCreationTests -->
-      <class name="com.example.tests.ContactRemovalTests">
-        <test-method status="PASS" signature="deleteSomeContact()[pri:0, instance:com.example.tests.ContactRemovalTests@1dd66fd]" name="deleteSomeContact" duration-ms="649" started-at="2014-03-22T17:49:46Z" finished-at="2014-03-22T17:49:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteSomeContact -->
-      </class> <!-- com.example.tests.ContactRemovalTests -->
-      <class name="com.example.tests.ContactModificationTests">
-        <test-method status="PASS" signature="contactModificationTests()[pri:0, instance:com.example.tests.ContactModificationTests@1e9c245]" name="contactModificationTests" duration-ms="805" started-at="2014-03-22T17:49:56Z" finished-at="2014-03-22T17:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- contactModificationTests -->
-      </class> <!-- com.example.tests.ContactModificationTests -->
-      <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="testEmptyContactCreation()[pri:0, instance:com.example.tests.ContactCreationTests@16bf9ce]" name="testEmptyContactCreation" duration-ms="4821" started-at="2014-03-22T17:49:56Z" finished-at="2014-03-22T17:50:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testEmptyContactCreation -->
-        <test-method status="PASS" signature="testNonEmptyContactCreation()[pri:0, instance:com.example.tests.ContactCreationTests@16bf9ce]" name="testNonEmptyContactCreation" duration-ms="4932" started-at="2014-03-22T17:50:01Z" finished-at="2014-03-22T17:50:06Z">
+        <test-method status="FAIL" signature="testNonEmptyContactCreation()[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="testNonEmptyContactCreation" duration-ms="3844" started-at="2014-03-23T13:41:45Z" finished-at="2014-03-23T13:41:49Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Lists differ at element [2]: ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ] != ContactData [name=first last, lastname=null, address=null, phone1null, ] expected [ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ]] but found [ContactData [name=first last, lastname=null, address=null, phone1null, ]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Lists differ at element [2]: ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ] != ContactData [name=first last, lastname=null, address=null, phone1null, ] expected [ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ]] but found [ContactData [name=first last, lastname=null, address=null, phone1null, ]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:549)
+	at org.testng.Assert.assertEquals(Assert.java:514)
+	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="tearDown" is-config="true" duration-ms="177" started-at="2014-03-23T13:41:49Z" finished-at="2014-03-23T13:41:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.example.tests.ContactCreationTests -->
-      <class name="com.example.tests.GroupModificationTests">
-        <test-method status="PASS" signature="modifySomeGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupModificationTests@1ff88c3]" name="modifySomeGroup" duration-ms="2225" started-at="2014-03-22T17:49:39Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test1097298833, header=, footer=test777726144]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- modifySomeGroup -->
-        <test-method status="PASS" signature="modifySomeGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupModificationTests@1ff88c3]" name="modifySomeGroup" duration-ms="1316" started-at="2014-03-22T17:49:41Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:42Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-516462227, header=test-1517202200, footer=]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- modifySomeGroup -->
-        <test-method status="PASS" signature="modifySomeGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupModificationTests@1ff88c3]" name="modifySomeGroup" duration-ms="1404" started-at="2014-03-22T17:49:42Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-517864267, header=test555316509, footer=]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- modifySomeGroup -->
-        <test-method status="PASS" signature="modifySomeGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupModificationTests@1ff88c3]" name="modifySomeGroup" duration-ms="1402" started-at="2014-03-22T17:49:44Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-1950994250, header=test-1430072537, footer=test1533163076]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- modifySomeGroup -->
-        <test-method status="PASS" signature="modifySomeGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupModificationTests@1ff88c3]" name="modifySomeGroup" duration-ms="1382" started-at="2014-03-22T17:49:45Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-22T17:49:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test2124180460, header=test968804937, footer=]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- modifySomeGroup -->
-      </class> <!-- com.example.tests.GroupModificationTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
