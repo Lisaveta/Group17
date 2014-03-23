@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 23 13:41:35 NOVT 2014</td>
+<td>Started on:</td><td>Sun Mar 23 14:08:30 NOVT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14445 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13666 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,13 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.example.tests.ContactCreationTests.testNonEmptyContactCreation()'><b>testNonEmptyContactCreation</b><br>Test class: com.example.tests.ContactCreationTests</td>
-<td><div><pre>java.lang.AssertionError: Lists differ at element [2]: ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ] != ContactData [name=first last, lastname=null, address=null, phone1null, ] expected [ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ]] but found [ContactData [name=first last, lastname=null, address=null, phone1null, ]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:549)
-	at org.testng.Assert.assertEquals(Assert.java:514)
-	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:43)
+<td><div><pre>java.lang.NullPointerException
+	at com.example.tests.ContactData.compareTo(ContactData.java:79)
+	at com.example.tests.ContactData.compareTo(ContactData.java:1)
+	at java.util.ComparableTimSort.countRunAndMakeAscending(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at java.util.Collections.sort(Unknown Source)
+	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -107,14 +109,16 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace6720997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace6720997'><pre>java.lang.AssertionError: Lists differ at element [2]: ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ] != ContactData [name=first last, lastname=null, address=null, phone1null, ] expected [ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ]] but found [ContactData [name=first last, lastname=null, address=null, phone1null, ]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:549)
-	at org.testng.Assert.assertEquals(Assert.java:514)
-	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:43)
+</pre></div><a href='#' onClick='toggleBox("stack-trace30020181", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace30020181'><pre>java.lang.NullPointerException
+	at com.example.tests.ContactData.compareTo(ContactData.java:79)
+	at com.example.tests.ContactData.compareTo(ContactData.java:1)
+	at java.util.ComparableTimSort.countRunAndMakeAscending(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at java.util.Collections.sort(Unknown Source)
+	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -141,7 +145,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
 <td>3</td>
-<td>com.example.tests.ContactCreationTests@1300800</td></tr>
+<td>com.example.tests.ContactCreationTests@b800</td></tr>
 </table><p>
 </body>
 </html>

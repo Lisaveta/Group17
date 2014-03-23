@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\VinnichenkoLI\AppData\Local\Temp\testng-eclipse--541120006\testng-customsuite.xml</span>
+                    <span>C:\Users\VinnichenkoLI\AppData\Local\Temp\testng-eclipse-930842797\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -127,13 +127,15 @@
                   <a name="testNonEmptyContactCreation">
                   </a> <!-- testNonEmptyContactCreation -->
                   <span class="method-name">testNonEmptyContactCreation</span>
-                  <div class="stack-trace">java.lang.AssertionError: Lists differ at element [2]: ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ] != ContactData [name=first last, lastname=null, address=null, phone1null, ] expected [ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ]] but found [ContactData [name=first last, lastname=null, address=null, phone1null, ]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:549)
-	at org.testng.Assert.assertEquals(Assert.java:514)
-	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:43)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.example.tests.ContactData.compareTo(ContactData.java:79)
+	at com.example.tests.ContactData.compareTo(ContactData.java:1)
+	at java.util.ComparableTimSort.countRunAndMakeAscending(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at java.util.Collections.sort(Unknown Source)
+	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -167,7 +169,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\VinnichenkoLI\AppData\Local\Temp\testng-eclipse--541120006\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\VinnichenkoLI\AppData\Local\Temp\testng-eclipse-930842797\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -220,7 +222,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testNonEmptyContactCreation')
 data.setCell(0, 2, 'com.example.tests.ContactCreationTests')
-data.setCell(0, 3, 3844);
+data.setCell(0, 3, 3867);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -260,11 +262,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testNonEmptyContactCreation</span>
-                <span class="method-start">10420 ms</span>
+                <span class="method-start">9635 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">14266 ms</span>
+                <span class="method-start">13504 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

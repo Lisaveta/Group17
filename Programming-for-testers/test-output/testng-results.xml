@@ -2,28 +2,27 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14445" started-at="2014-03-23T06:41:35Z" finished-at="2014-03-23T06:41:49Z">
+  <suite name="Default suite" duration-ms="13666" started-at="2014-03-23T07:08:30Z" finished-at="2014-03-23T07:08:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14445" started-at="2014-03-23T06:41:35Z" finished-at="2014-03-23T06:41:49Z">
+    <test name="Default test" duration-ms="13666" started-at="2014-03-23T07:08:30Z" finished-at="2014-03-23T07:08:43Z">
       <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="setUp" is-config="true" duration-ms="10416" started-at="2014-03-23T13:41:35Z" finished-at="2014-03-23T13:41:45Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="setUp" is-config="true" duration-ms="9630" started-at="2014-03-23T14:08:30Z" finished-at="2014-03-23T14:08:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testNonEmptyContactCreation()[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="testNonEmptyContactCreation" duration-ms="3844" started-at="2014-03-23T13:41:45Z" finished-at="2014-03-23T13:41:49Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Lists differ at element [2]: ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ] != ContactData [name=first last, lastname=null, address=null, phone1null, ] expected [ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ]] but found [ContactData [name=first last, lastname=null, address=null, phone1null, ]]]]>
-            </message>
+        <test-method status="FAIL" signature="testNonEmptyContactCreation()[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="testNonEmptyContactCreation" duration-ms="3867" started-at="2014-03-23T14:08:39Z" finished-at="2014-03-23T14:08:43Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Lists differ at element [2]: ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ] != ContactData [name=first last, lastname=null, address=null, phone1null, ] expected [ContactData [name=bggff rrr, lastname=null, address=null, phone1null, ]] but found [ContactData [name=first last, lastname=null, address=null, phone1null, ]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:549)
-	at org.testng.Assert.assertEquals(Assert.java:514)
-	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:43)
+              <![CDATA[java.lang.NullPointerException
+	at com.example.tests.ContactData.compareTo(ContactData.java:79)
+	at com.example.tests.ContactData.compareTo(ContactData.java:1)
+	at java.util.ComparableTimSort.countRunAndMakeAscending(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at java.util.Collections.sort(Unknown Source)
+	at com.example.tests.ContactCreationTests.testNonEmptyContactCreation(ContactCreationTests.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,11 +49,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNonEmptyContactCreation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="tearDown" is-config="true" duration-ms="177" started-at="2014-03-23T13:41:49Z" finished-at="2014-03-23T13:41:49Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="tearDown" is-config="true" duration-ms="160" started-at="2014-03-23T14:08:43Z" finished-at="2014-03-23T14:08:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

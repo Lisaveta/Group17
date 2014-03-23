@@ -40,17 +40,18 @@ public class ContactData implements Comparable<ContactData> {
 
 	@Override
 	public String toString() {
-		return "ContactData [name=" + name + ", lastname=" + lastname+", address=" + address+", phone1" + phone1+", ]";
+		return "ContactData [name=" + name + ", lastname=" + lastname + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		//result = prime * result
+		//		+ ((lastname == null) ? 0 : lastname.hashCode());
 		//result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -60,6 +61,11 @@ public class ContactData implements Comparable<ContactData> {
 		if (getClass() != obj.getClass())
 			return false;
 		ContactData other = (ContactData) obj;
+		if (lastname == null) {
+			if (other.lastname != null)
+				return false;
+		} else if (!lastname.equals(other.lastname))
+			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;
@@ -70,7 +76,8 @@ public class ContactData implements Comparable<ContactData> {
 
 	@Override
 	public int compareTo(ContactData other) {
-		return this.name.toLowerCase().compareTo(other.name.toLowerCase());
+		return this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
+
 	}
 	
 	
