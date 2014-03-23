@@ -1,14 +1,19 @@
 package com.example.tests;
 
+import static org.testng.Assert.assertEquals;
+import java.util.Collections;
 import java.util.List;
 import org.testng.annotations.Test;
+
 public class ManyContactsRemovalTests extends TestBase{
 
-	//@Test
+	@Test
 	public void deleteSomeContact() {
-    app.getNavigationHelper().openMainPage();
-    app.getContactHelper().initContactModification(1);
+		for(int i=0;i<20;i++){
+	app.getNavigationHelper().openMainPage();
+    app.getContactHelper().initContactModification(0);
 	app.getContactHelper().deleteContact();
     app.getNavigationHelper().returnMainPage();
-	}
+		}
+ 	}
 }

@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="contactModificationTests"/>
+          <include name="contactModificationTests" invocation-numbers="0 1 2 3 4"/>
         </methods>
       </class> <!-- com.example.tests.ContactModificationTests -->
     </classes>
