@@ -49,7 +49,7 @@ public class ContactHelper extends HelperBase {
 	}
 
 	private void initModificationContact(int index) {
-		click(By.xpath("//img[@alt='Edit'][" + index + "]"));
+		click(By.xpath("//img[@alt='Edit'][" + (index+1) + "]"));
 	}
 
 	public void deleteContact() {

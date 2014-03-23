@@ -40,18 +40,11 @@ public class ContactData implements Comparable<ContactData> {
 
 	@Override
 	public String toString() {
-		return "ContactData [name=" + name + ", lastname=" + lastname + "]";
+		return "ContactData [name=" + name + ", lastname=" + lastname
+				+ ", address=" + address + ", phone1=" + phone1 + ", phone3="
+				+ phone3 + ", mail1=" + mail1 + ", mail2=" + mail2 + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		//result = prime * result
-		//		+ ((lastname == null) ? 0 : lastname.hashCode());
-		//result = prime * result + ((name == null) ? 0 : name.hashCode());
-		return result;
-	}
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -61,6 +54,11 @@ public class ContactData implements Comparable<ContactData> {
 		if (getClass() != obj.getClass())
 			return false;
 		ContactData other = (ContactData) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
 		if (lastname == null) {
 			if (other.lastname != null)
 				return false;
@@ -71,9 +69,27 @@ public class ContactData implements Comparable<ContactData> {
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
+		if (phone1 == null) {
+			if (other.phone1 != null)
+				return false;
+		} else if (!phone1.equals(other.phone1))
+			return false;
 		return true;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		//result = prime * result + ((address == null) ? 0 : address.hashCode());
+		//result = prime * result
+		//		+ ((lastname == null) ? 0 : lastname.hashCode());
+		//result = prime * result + ((name == null) ? 0 : name.hashCode());
+		//result = prime * result + ((phone1 == null) ? 0 : phone1.hashCode());
+		return result;
+	}
+
+	
 	@Override
 	public int compareTo(ContactData other) {
 		return this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
