@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testContactCreationWithValidData" invocation-numbers="1"/>
+          <include name="testContactCreationWithValidData" invocation-numbers="0 1 2 3 4"/>
         </methods>
       </class> <!-- com.example.tests.ContactCreationTests -->
     </classes>

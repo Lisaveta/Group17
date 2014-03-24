@@ -16,7 +16,7 @@ public class ContactCreationTests extends TestBase {
 	app.getNavigationHelper().openMainPage();
 	
 	// save old state
-//	List<ContactData> oldList = app.getContactHelper().getContacts();
+	List<ContactData> oldList = app.getContactHelper().getContacts();
 	
 	// actions
     app.getContactHelper().initContactCreation();
@@ -28,19 +28,18 @@ public class ContactCreationTests extends TestBase {
     app.getNavigationHelper().returnMainPage();
 
     //save new state
-  //  List<ContactData> newList = app.getContactHelper().getContacts();
+   List<ContactData> newList = app.getContactHelper().getContacts();
     // compare states
   
-//    oldList.add(contact);
-//    Collections.sort(oldList);
-//    assertEquals(newList, oldList);
+    oldList.add(contact);
+    Collections.sort(oldList);
+    assertEquals(newList, oldList);
   }
 	@DataProvider
 	public Iterator<Object[]>randomValidsContactGenerator(){
 		List<Object[]> list = new ArrayList<Object[]>();
 		for (int i = 0; i < 5; i++){
 		ContactData contact = new ContactData();
-		contact.name = generateRandomString();
 		contact.name = generateRandomString();
 		contact.lastname = generateRandomString();
 		contact.address = generateRandomString();

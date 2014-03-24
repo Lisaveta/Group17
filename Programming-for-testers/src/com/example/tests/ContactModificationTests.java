@@ -32,13 +32,13 @@ public class ContactModificationTests extends TestBase{
     app.getNavigationHelper().returnMainPage();
 
     //save new state
-   // List<ContactData> newList = app.getContactHelper().getContacts();
+    List<ContactData> newList = app.getContactHelper().getContacts();
     // compare states
 
-   // oldList.remove(0);
-   // oldList.add(contact);
-   // Collections.sort(oldList);
-   // assertEquals(newList, oldList);
+    oldList.remove(0);
+    oldList.add(contact);
+    Collections.sort(oldList);
+    assertEquals(newList, oldList);
 	
 	}
 	@DataProvider
@@ -70,8 +70,5 @@ public class ContactModificationTests extends TestBase{
 		}else{
 			return "test" + rnd.nextInt();
 		}
-
-	  }
-
-
+	 }
 }

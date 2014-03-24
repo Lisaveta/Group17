@@ -37,14 +37,14 @@ public class ContactData implements Comparable<ContactData> {
 		this.address2 = address2;
 		this.phone2 = phone2;
 	}
-
+//  что бы было удобно читать, чтобы можно было объект "напечатать" на консоль или в лог-файл
 	@Override
 	public String toString() {
 		return "ContactData [name=" + name + ", lastname=" + lastname
 				+ ", address=" + address + ", phone1=" + phone1 + ", phone3="
 				+ phone3 + ", mail1=" + mail1 + ", mail2=" + mail2 + "]";
 	}
-
+// чтобы сравнивать на "равно-не равно"
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -54,29 +54,31 @@ public class ContactData implements Comparable<ContactData> {
 		if (getClass() != obj.getClass())
 			return false;
 		ContactData other = (ContactData) obj;
-		if (address == null) {
-			if (other.address != null)
-				return false;
-		} else if (!address.equals(other.address))
-			return false;
-		if (lastname == null) {
-			if (other.lastname != null)
-				return false;
-		} else if (!lastname.equals(other.lastname))
-			return false;
+//		if (address == null) {
+//			if (other.address != null)
+//				return false;
+//		} else if (!address.equals(other.address))
+//			return false;
+//		if (lastname == null) {
+//			if (other.lastname != null)
+//				return false;
+//		} else if (!lastname.equals(other.lastname))
+//			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
-		if (phone1 == null) {
-			if (other.phone1 != null)
-				return false;
-		} else if (!phone1.equals(other.phone1))
-			return false;
+//		if (phone1 == null) {
+//			if (other.phone1 != null)
+//				return false;
+//		} else if (!phone1.equals(other.phone1))
+//			return false;
 		return true;
 	}
 
+	// это оптимизаци€ сравнени€: то есть сначала у двух объектов сравниваютс€ хешкоды, и только если они совпали тогда выполн€етс€ сравнение методом equals
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -89,12 +91,10 @@ public class ContactData implements Comparable<ContactData> {
 		return result;
 	}
 
-	
+	// чтобы сравнивать на "больше-меньше", то есть определ€ть пор€док (упор€дочение)
 	@Override
 	public int compareTo(ContactData other) {
 		return this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
-
 	}
-	
-	
+
 }

@@ -49,7 +49,7 @@ public class ContactHelper extends HelperBase {
 	}
 
 	private void initModificationContact(int index) {
-		click(By.xpath("//img[@alt='Edit'][" + (index) + "]"));
+		click(By.xpath("//img[@alt='Edit'][" + (index +1) + "]"));
 	}
 
 	public void deleteContact() {
@@ -59,6 +59,8 @@ public class ContactHelper extends HelperBase {
 		click(By.xpath("(//input[@name='update'])[1]"));		
 	}
 
+	// поменять метод getContacts, который читает данные из приложения? что бы он firstname и lastname брал из "правильных" столбцов, а не как написано в заголовке
+	
 	public List<ContactData> getContacts() {
 		List<ContactData> contacts = new ArrayList<ContactData>();
 		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
@@ -66,6 +68,9 @@ public class ContactHelper extends HelperBase {
 			ContactData contact = new ContactData();
 			String title = checkbox.getAttribute("title");
 			contact.name = title.substring("Select (".length(), title.length() - ")".length());
+			contact.lastname = title.substring("Select (".length(), title.length() - ")".length());
+			contact.address = title.substring("Select (".length(), title.length() - ")".length());
+			contact.phone1 = title.substring("Select (".length(), title.length() - ")".length());
 			contacts.add(contact);
 		}
 		return contacts;
