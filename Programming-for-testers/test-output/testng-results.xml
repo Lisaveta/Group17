@@ -1,25 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6139" started-at="2014-03-23T14:38:13Z" finished-at="2014-03-23T14:38:19Z">
+  <suite name="Default suite" duration-ms="16000" started-at="2014-03-24T07:03:03Z" finished-at="2014-03-24T07:03:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6139" started-at="2014-03-23T14:38:13Z" finished-at="2014-03-23T14:38:19Z">
-      <class name="com.example.tests.ContactModificationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactModificationTests@ced6e2]" name="setUp" is-config="true" duration-ms="4661" started-at="2014-03-23T21:38:13Z" finished-at="2014-03-23T21:38:18Z">
+    <test name="Default test" duration-ms="16000" started-at="2014-03-24T07:03:03Z" finished-at="2014-03-24T07:03:19Z">
+      <class name="com.example.tests.ContactCreationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="setUp" is-config="true" duration-ms="5569" started-at="2014-03-24T14:03:03Z" finished-at="2014-03-24T14:03:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="contactModificationTests()[pri:0, instance:com.example.tests.ContactModificationTests@ced6e2]" name="contactModificationTests" duration-ms="1211" started-at="2014-03-23T21:38:18Z" finished-at="2014-03-23T21:38:19Z">
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="testContactCreationWithValidData" duration-ms="2878" started-at="2014-03-24T14:03:08Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-24T14:03:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ContactData [name=test-230107264, lastname=, address=, phone1=, phone3=test-1858411091, mail1=test-576406314, mail2=test-1920878101]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- contactModificationTests -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactModificationTests@ced6e2]" name="tearDown" is-config="true" duration-ms="260" started-at="2014-03-23T21:38:19Z" finished-at="2014-03-23T21:38:19Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="testContactCreationWithValidData" duration-ms="1713" started-at="2014-03-24T14:03:11Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-24T14:03:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ContactData [name=, lastname=test742031253, address=test-225595954, phone1=, phone3=, mail1=test562552087, mail2=]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="testContactCreationWithValidData" duration-ms="1873" started-at="2014-03-24T14:03:13Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-24T14:03:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ContactData [name=test978344304, lastname=, address=test-248910354, phone1=test1002267831, phone3=test1370371769, mail1=test1190304250, mail2=test-644251580]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="testContactCreationWithValidData" duration-ms="1815" started-at="2014-03-24T14:03:15Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-24T14:03:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ContactData [name=, lastname=test396780394, address=, phone1=test-288798033, phone3=, mail1=test401660802, mail2=]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="testContactCreationWithValidData" duration-ms="1931" started-at="2014-03-24T14:03:17Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-24T14:03:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ContactData [name=test-1254496813, lastname=test-594222675, address=, phone1=test-1599619850, phone3=, mail1=, mail2=]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@1300800]" name="tearDown" is-config="true" duration-ms="212" started-at="2014-03-24T14:03:19Z" finished-at="2014-03-24T14:03:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.ContactModificationTests -->
+      </class> <!-- com.example.tests.ContactCreationTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

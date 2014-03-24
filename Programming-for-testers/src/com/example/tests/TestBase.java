@@ -1,5 +1,7 @@
 package com.example.tests;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -15,11 +17,13 @@ public class TestBase {
 	
 	protected static ApplicationManager app;
 
+	
 	@BeforeTest
 	public void setUp() throws Exception {
 	app = new ApplicationManager();
 	}
 
+	
 	@AfterTest
 	public void tearDown() throws Exception {
 	app.stop();	
@@ -45,6 +49,5 @@ public String generateRandomString(){
 	} else {
 		return "test" + rnd.nextInt();
 	}
- }
-
+}
 }
