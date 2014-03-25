@@ -48,6 +48,7 @@ public String generateRandomString(){
 		return "";
 	} else {
 		return "test" + rnd.nextInt();
+		}
 	}
 }
-}
+

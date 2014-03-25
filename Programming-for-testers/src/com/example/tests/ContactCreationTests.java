@@ -59,11 +59,11 @@ public class ContactCreationTests extends TestBase {
 
 	public String generateRandomString(){
 		Random rnd = new Random();
-		if (rnd.nextInt(3) == 0) {
-			return "";
-		}else{
+//		if (rnd.nextInt(3) == 0) {
+//			return "";
+//		}else{
 			return "test" + rnd.nextInt();
-		}
+//		}
 	}
 
 

@@ -2,75 +2,75 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14946" started-at="2014-03-24T11:49:15Z" finished-at="2014-03-24T11:49:30Z">
+  <suite name="Default suite" duration-ms="73775" started-at="2014-03-25T03:05:57Z" finished-at="2014-03-25T03:07:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14946" started-at="2014-03-24T11:49:15Z" finished-at="2014-03-24T11:49:30Z">
-      <class name="com.example.tests.GroupCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@1d74bb1]" name="setUp" is-config="true" duration-ms="5399" started-at="2014-03-24T18:49:15Z" finished-at="2014-03-24T18:49:21Z">
+    <test name="Default test" duration-ms="73775" started-at="2014-03-25T03:05:57Z" finished-at="2014-03-25T03:07:11Z">
+      <class name="com.example.tests.ContactCreationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="setUp" is-config="true" duration-ms="5307" started-at="2014-03-25T10:05:57Z" finished-at="2014-03-25T10:06:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@1d74bb1]" name="testValidGroupCreationWishValidData" duration-ms="2500" started-at="2014-03-24T18:49:21Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-24T18:49:23Z">
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="testContactCreationWithValidData" duration-ms="11456" started-at="2014-03-25T10:06:03Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-25T10:06:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test887993488, header=, footer=test-519331072]]]>
+                <![CDATA[ContactData [name=test768994765, lastname=test485934382]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@1d74bb1]" name="testValidGroupCreationWishValidData" duration-ms="1549" started-at="2014-03-24T18:49:23Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-24T18:49:25Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="testContactCreationWithValidData" duration-ms="10210" started-at="2014-03-25T10:06:14Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-25T10:06:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test-731153575, header=test-1866735448, footer=test1484765053]]]>
+                <![CDATA[ContactData [name=test-2104423493, lastname=test-921633222]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@1d74bb1]" name="testValidGroupCreationWishValidData" duration-ms="1710" started-at="2014-03-24T18:49:25Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-24T18:49:26Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="testContactCreationWithValidData" duration-ms="15472" started-at="2014-03-25T10:06:24Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-25T10:06:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test1232539618, header=, footer=test-57672267]]]>
+                <![CDATA[ContactData [name=test-40812153, lastname=test-1631517574]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@1d74bb1]" name="testValidGroupCreationWishValidData" duration-ms="1725" started-at="2014-03-24T18:49:26Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-24T18:49:28Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="testContactCreationWithValidData" duration-ms="22328" started-at="2014-03-25T10:06:40Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-25T10:07:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=, header=test2061439593, footer=test1517625050]]]>
+                <![CDATA[ContactData [name=test985818461, lastname=test1889425422]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@1d74bb1]" name="testValidGroupCreationWishValidData" duration-ms="1894" started-at="2014-03-24T18:49:28Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-24T18:49:30Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="testContactCreationWithValidData" duration-ms="8825" started-at="2014-03-25T10:07:02Z" data-provider="randomValidsContactGenerator" finished-at="2014-03-25T10:07:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test335798313, header=test1518650147, footer=test263283175]]]>
+                <![CDATA[ContactData [name=test216112190, lastname=test-476686941]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@1d74bb1]" name="tearDown" is-config="true" duration-ms="159" started-at="2014-03-24T18:49:30Z" finished-at="2014-03-24T18:49:30Z">
+        </test-method> <!-- testContactCreationWithValidData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@b800]" name="tearDown" is-config="true" duration-ms="166" started-at="2014-03-25T10:07:11Z" finished-at="2014-03-25T10:07:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.GroupCreationTests -->
+      </class> <!-- com.example.tests.ContactCreationTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
