@@ -48,8 +48,8 @@ public class ContactCreationTests extends TestBase {
 		contact.phone3 = generateRandomString();
 		contact.wphone1 = generateRandomString();
 		contact.phone2 = generateRandomString();
-		contact.mail1 = generateRandomString();
-		contact.mail2 = generateRandomString();
+		contact.mail1 = generateRandomEmail();
+		contact.mail2 = generateRandomEmail();
 		contact.byear = generateRandomString();	
 		list.add(new Object[]{contact});
 	}
@@ -63,8 +63,14 @@ public class ContactCreationTests extends TestBase {
 //			return "";
 //		}else{
 			return "test" + rnd.nextInt();
-//		}
+		}
+	
+	public String generateRandomEmail(){
+		Random rnd = new Random();
+//		if (rnd.nextInt(3) == 0) {
+//			return "";
+//		}else{
+			return rnd.nextInt() +"@mail.ru";
+		}
+
 	}
-
-
-}

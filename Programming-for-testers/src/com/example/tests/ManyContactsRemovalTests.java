@@ -9,7 +9,7 @@ public class ManyContactsRemovalTests extends TestBase{
 
 	@Test
 	public void deleteSomeContact() {
-		for(int i=0;i<20;i++){
+		for(int i=0;i<1;i++){
 	app.getNavigationHelper().openMainPage();
     app.getContactHelper().initContactModification(0);
 	app.getContactHelper().deleteContact();

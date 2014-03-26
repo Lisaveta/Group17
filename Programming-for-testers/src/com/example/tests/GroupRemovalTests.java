@@ -1,11 +1,9 @@
 package com.example.tests;
 
 import static org.testng.Assert.assertEquals;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-
 import org.testng.annotations.Test;
 
 public class GroupRemovalTests extends TestBase{

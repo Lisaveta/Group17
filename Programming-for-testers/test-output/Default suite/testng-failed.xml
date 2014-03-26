@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.example.tests.ContactCreationTests">
+      <class name="com.example.tests.ContactModificationTests">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testContactCreationWithValidData" invocation-numbers="2"/>
+          <include name="contactModificationTests"/>
         </methods>
-      </class> <!-- com.example.tests.ContactCreationTests -->
+      </class> <!-- com.example.tests.ContactModificationTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
