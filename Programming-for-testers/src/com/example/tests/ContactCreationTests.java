@@ -18,9 +18,6 @@ public class ContactCreationTests extends TestBase {
 	
 	// actions
     app.getContactHelper().initContactCreation();
-	contact.bday = "1";
-	contact.bmonth = "January";
-	contact.byear = "1980";	
     app.getContactHelper().fillContactForm(contact, CREATION);
     app.getContactHelper().submitContactCreation();
     app.navigateTo().returnMainPage();

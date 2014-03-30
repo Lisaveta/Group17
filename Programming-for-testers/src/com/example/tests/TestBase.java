@@ -51,14 +51,14 @@ public class TestBase {
 			contact.name = generateRandomString();
 			contact.lastname = generateRandomString();
 			contact.address = generateRandomString();
-			contact.address2 = generateRandomString();
-			contact.phone1 = generateRandomString();
-			contact.phone3 = generateRandomString();
-			contact.wphone1 = generateRandomString();
-			contact.phone2 = generateRandomString();
+			contact.phone1 = generateRandomPhone();
+			contact.phone3 = generateRandomPhone();
+			contact.wphone1 = generateRandomPhone();
 			contact.mail1 = generateRandomEmail();
 			contact.mail2 = generateRandomEmail();
 			contact.byear = generateRandomString();	
+			contact.address2 = generateRandomString();
+			contact.phone2 = generateRandomPhone();
 			list.add(new Object[]{contact});
 		}
 				
@@ -79,6 +79,13 @@ public class TestBase {
 //				return "";
 //			}else{
 				return rnd.nextInt() +"@mail.ru";
+			}
+		public String generateRandomPhone(){
+			Random rnd = new Random();
+//			if (rnd.nextInt(3) == 0) {
+//				return "";
+//			}else{
+				return "+7" + rnd.nextInt();
 			}
 
 
