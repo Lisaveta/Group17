@@ -6,31 +6,41 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import com.example.tests.GroupData;
+import com.example.utils.SortedListOf;
 
 public class GroupHelper extends HelperBase {
 
 	public GroupHelper(ApplicationManager manager) {
 		super(manager);		
 	}
+	private SortedListOf<GroupData> cachedGroups;
 	
-	public List<GroupData> getGroups() {
-		List<GroupData> groups = new ArrayList<GroupData>();
+	public SortedListOf<GroupData> getGroups() {
+	if (cachedGroups == null) {
+		rebuildCache();
+	}
+	return cachedGroups;
+	}
+	
+	private void rebuildCache() {
+		cachedGroups = new SortedListOf<GroupData>();
+			
 		manager.navigateTo().groupsPage();
 		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
 		for (WebElement checkbox : checkboxes) {
 			String title = checkbox.getAttribute("title");
 			String name = title.substring("Select (".length(), title.length() - ")".length());
-			groups.add(new GroupData().withName(name));
+			cachedGroups.add(new GroupData().withName(name));
 		}
-		return groups;
 	}
-	
+
 	public GroupHelper createGroup(GroupData group) {
 		manager.navigateTo().groupsPage();
 		initGroupCreation();
 		fillGroupForm(group);
 	    submitGroupCreation();
 	    returnToGroupsPage();
+	    rebuildCache();
 	    return this;
 	}	    
 
@@ -38,6 +48,7 @@ public class GroupHelper extends HelperBase {
 		selectGroupByIndex(index);
 		submitGroupDeletion();
 	    returnToGroupsPage();
+	    rebuildCache();
 		return this;
 	}
 
@@ -47,6 +58,7 @@ public class GroupHelper extends HelperBase {
 	    fillGroupForm(group);
 		submitGroupModification();
 		returnToGroupsPage();
+		rebuildCache();
 		return this;
 	
 	}
@@ -67,6 +79,7 @@ public class GroupHelper extends HelperBase {
 
 	public GroupHelper submitGroupCreation() {
 		click(By.name("submit"));
+		cachedGroups = null;
 		return this;
 	}
 
@@ -88,11 +101,13 @@ public class GroupHelper extends HelperBase {
 
 	public GroupHelper submitGroupModification() {
 		click(By.name("update"));	
+		cachedGroups = null;
 		return this;
 	}
 	
 	private void submitGroupDeletion() {
 		click(By.name("delete"));
+		cachedGroups = null;
 	}
 	
 

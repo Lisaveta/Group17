@@ -1,76 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14973" started-at="2014-03-30T05:53:01Z" finished-at="2014-03-30T05:53:16Z">
+  <suite name="Default suite" duration-ms="12704" started-at="2014-03-30T08:49:41Z" finished-at="2014-03-30T08:49:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14973" started-at="2014-03-30T05:53:01Z" finished-at="2014-03-30T05:53:16Z">
-      <class name="com.example.tests.GroupCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@13fe849]" name="setUp" is-config="true" duration-ms="5201" started-at="2014-03-30T12:53:01Z" finished-at="2014-03-30T12:53:06Z">
+    <test name="Default test" duration-ms="12704" started-at="2014-03-30T08:49:41Z" finished-at="2014-03-30T08:49:54Z">
+      <class name="com.example.tests.ManyGroupRemovalTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ManyGroupRemovalTests@351f6d]" name="setUp" is-config="true" duration-ms="5498" started-at="2014-03-30T15:49:41Z" finished-at="2014-03-30T15:49:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@13fe849]" name="testValidGroupCreationWishValidData" duration-ms="2601" started-at="2014-03-30T12:53:06Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-30T12:53:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test2047854478, header=test-2034897970, footer=test-621062589]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="deleteSomeGroup()[pri:0, instance:com.example.tests.ManyGroupRemovalTests@351f6d]" name="deleteSomeGroup" duration-ms="7051" started-at="2014-03-30T15:49:46Z" finished-at="2014-03-30T15:49:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@13fe849]" name="testValidGroupCreationWishValidData" duration-ms="1585" started-at="2014-03-30T12:53:09Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-30T12:53:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-1276277492, header=test-250660627, footer=test975078817]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@13fe849]" name="testValidGroupCreationWishValidData" duration-ms="1737" started-at="2014-03-30T12:53:11Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-30T12:53:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test1120922966, header=test-22741022, footer=test-342166050]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@13fe849]" name="testValidGroupCreationWishValidData" duration-ms="1768" started-at="2014-03-30T12:53:12Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-30T12:53:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test-2001097183, header=test-1598829429, footer=test2117533391]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@13fe849]" name="testValidGroupCreationWishValidData" duration-ms="1842" started-at="2014-03-30T12:53:14Z" data-provider="randomValidGroupsGenerator" finished-at="2014-03-30T12:53:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GroupData [name=test485963110, header=test1548218516, footer=test-697175509]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidGroupCreationWishValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@13fe849]" name="tearDown" is-config="true" duration-ms="225" started-at="2014-03-30T12:53:16Z" finished-at="2014-03-30T12:53:16Z">
+        </test-method> <!-- deleteSomeGroup -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ManyGroupRemovalTests@351f6d]" name="tearDown" is-config="true" duration-ms="146" started-at="2014-03-30T15:49:54Z" finished-at="2014-03-30T15:49:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.GroupCreationTests -->
+      </class> <!-- com.example.tests.ManyGroupRemovalTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

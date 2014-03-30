@@ -1,15 +1,12 @@
 package com.example.tests;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
 import static org.testng.Assert.assertEquals;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
+import java.util.Collections;
 import org.testng.annotations.Test;
+import com.example.utils.SortedListOf;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.*;
+
 
 public class GroupCreationTests extends TestBase {
 
@@ -19,16 +16,15 @@ public class GroupCreationTests extends TestBase {
     //save old state 
     // будет возвращать список имеющихся групп (список объектов типа groupData)
     
-    List<GroupData> oldList = app.getGroupHelper().getGroups();
+	SortedListOf<GroupData> oldList = app.getGroupHelper().getGroups();
     
     // actions
     app.getGroupHelper().createGroup(group);
+   
     // save new state
-    List<GroupData> newList = app.getGroupHelper().getGroups();  
+    SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();  
     
     // compare states
-    oldList.add(group);
-    Collections.sort(oldList);
-    assertEquals(newList, oldList);
+    assertThat(newList, equalTo(oldList.withAdded(group)));
   	}
  }
