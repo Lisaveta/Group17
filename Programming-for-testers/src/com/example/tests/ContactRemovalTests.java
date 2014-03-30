@@ -22,7 +22,7 @@ public class ContactRemovalTests extends TestBase{
 	
    // actions
     
-    app.getContactHelper().initContactModification(0);
+    app.getContactHelper().initContactModification(index);
 	app.getContactHelper().deleteContact();
     app.getNavigationHelper().returnMainPage();
     

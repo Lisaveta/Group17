@@ -23,10 +23,10 @@ public class ContactModificationTests extends TestBase{
 	int index = rnd.nextInt(oldList.size()-1);
 
     
-    app.getContactHelper().initContactModification(0);
+    app.getContactHelper().initContactModification(index);
 	ContactData contact = new ContactData();
-	contact.name = "1111111";
-	contact.lastname = "22222";
+	contact.name = "новое имя";
+	contact.lastname = "новая фамилия";
 	app.getContactHelper().fillContactForm(contact);
 	app.getContactHelper().submitContactModification();
     app.getNavigationHelper().returnMainPage();
