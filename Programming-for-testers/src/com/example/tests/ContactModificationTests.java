@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
 
 public class ContactModificationTests extends TestBase{
 
-	@Test
-	public void contactModificationTests() {
+	@Test(dataProvider = "randomValidContactGenerator")
+	public void contactModificationTests(ContactData contact) throws Exception{
     app.getNavigationHelper().openMainPage();
 	// save old state
 	List<ContactData> oldList = app.getContactHelper().getContacts();
@@ -24,7 +24,7 @@ public class ContactModificationTests extends TestBase{
 
     
     app.getContactHelper().initContactModification(index);
-	ContactData contact = new ContactData();
+	
 	contact.name = "новое имя";
 	contact.lastname = "новая фамилия";
 	app.getContactHelper().fillContactForm(contact);
@@ -41,34 +41,4 @@ public class ContactModificationTests extends TestBase{
     assertEquals(newList, oldList);
 	
 	}
-	@DataProvider
-	public Iterator<Object[]>randomValidsContactGenerator(){
-		List<Object[]> list = new ArrayList<Object[]>();
-		for (int i = 0; i < 5; i++){
-			ContactData contact = new ContactData();
-			contact.name = generateRandomString();
-			contact.lastname = generateRandomString();
-			contact.address = generateRandomString();
-			contact.address2 = generateRandomString();
-			contact.phone1 = generateRandomString();
-			contact.phone3 = generateRandomString();
-			contact.wphone1 = generateRandomString();
-			contact.phone2 = generateRandomString();
-			contact.mail1 = generateRandomString();
-			contact.mail2 = generateRandomString();
-			contact.byear = generateRandomString();	
-			list.add(new Object[]{contact});
-		}
-				
-		return list.iterator();
-	}
-
-	public String generateRandomString(){
-		Random rnd = new Random();
-		if (rnd.nextInt(3) == 0) {
-			return "";
-		}else{
-			return "test" + rnd.nextInt();
-		}
-	 }
 }
