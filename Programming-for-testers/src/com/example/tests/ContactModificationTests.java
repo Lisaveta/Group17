@@ -24,9 +24,6 @@ public class ContactModificationTests extends TestBase{
 
     
     app.getContactHelper().initContactModification(index);
-	
-	contact.name = "новое имя";
-	contact.lastname = "новая фамилия";
 	app.getContactHelper().fillContactForm(contact);
 	app.getContactHelper().submitContactModification();
     app.getNavigationHelper().returnMainPage();
