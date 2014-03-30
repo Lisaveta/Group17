@@ -12,9 +12,6 @@ public class GroupModificationTests extends TestBase{
 
 	@Test(dataProvider = "randomValidGroupsGenerator")
 	public void modifySomeGroup(GroupData group) {
-    app.getNavigationHelper().openMainPage();
-    app.getNavigationHelper().gotoGroupsPage();
-
     //save old state 
     // будет возвращать список имеющихся групп (список объектов типа groupData)
     
@@ -24,11 +21,7 @@ public class GroupModificationTests extends TestBase{
     int index = rnd.nextInt(oldList.size() - 1);
    
     // actions
-    
-    app.getGroupHelper().initGroupModification(index);
-	app.getGroupHelper().fillGroupForm(group);
-	app.getGroupHelper().submitGroupModification();
-	app.getGroupHelper().returnToGroupsPage();
+    app.getGroupHelper().modifyGroup(index, group);
  
 	// save new state
     List<GroupData> newList = app.getGroupHelper().getGroups();  

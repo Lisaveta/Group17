@@ -1,13 +1,12 @@
 package com.example.tests;
 
+import static com.example.fw.ContactHelper.CREATION;
 import static org.testng.Assert.assertEquals;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -15,7 +14,7 @@ public class ContactModificationTests extends TestBase{
 
 	@Test(dataProvider = "randomValidContactGenerator")
 	public void contactModificationTests(ContactData contact) throws Exception{
-    app.getNavigationHelper().openMainPage();
+    app.navigateTo().mainPage();
 	// save old state
 	List<ContactData> oldList = app.getContactHelper().getContacts();
 
@@ -24,9 +23,12 @@ public class ContactModificationTests extends TestBase{
 
     
     app.getContactHelper().initContactModification(index);
-	app.getContactHelper().fillContactForm(contact);
+	
+	contact.name = "новое имя";
+	contact.lastname = "новая фамилия";
+	app.getContactHelper().fillContactForm(contact, CREATION);
 	app.getContactHelper().submitContactModification();
-    app.getNavigationHelper().returnMainPage();
+    app.navigateTo().returnMainPage();
 
     //save new state
     List<ContactData> newList = app.getContactHelper().getContacts();
@@ -38,4 +40,5 @@ public class ContactModificationTests extends TestBase{
     assertEquals(newList, oldList);
 	
 	}
+	
 }

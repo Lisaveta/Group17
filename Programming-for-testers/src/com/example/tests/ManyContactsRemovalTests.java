@@ -10,10 +10,10 @@ public class ManyContactsRemovalTests extends TestBase{
 	@Test
 	public void deleteSomeContact() {
 		for(int i=0;i<1;i++){
-	app.getNavigationHelper().openMainPage();
+	app.navigateTo().mainPage();
     app.getContactHelper().initContactModification(0);
 	app.getContactHelper().deleteContact();
-    app.getNavigationHelper().returnMainPage();
+    app.navigateTo().returnMainPage();
 		}
  	}
 }
