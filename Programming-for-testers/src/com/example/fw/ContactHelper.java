@@ -1,5 +1,7 @@
 package com.example.fw;
 
+import static com.example.fw.ContactHelper.CREATION;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,11 +18,31 @@ public class ContactHelper extends HelperBase {
 	public ContactHelper(ApplicationManager manager) {
 		super(manager);
 		}
-	
-	public ContactHelper initContactCreation() {
-		click(By.linkText("add new"));
-		return this;
+
+	public ContactHelper createContact(ContactData contact) {
+		    manager.navigateTo().mainPage();
+		    initContactCreation();
+		    fillContactForm(contact, CREATION);
+		    submitContactCreation();
+		    returnMainPage();
+	        return this;
 	}
+
+	public List<ContactData> getContacts() {
+		manager.navigateTo().mainPage();
+		List<ContactData> contacts = new ArrayList<ContactData>();
+		List<WebElement> tableRows = driver.findElements(By.xpath("//table//tr[@name='entry']"));
+		for (WebElement row : tableRows) {
+			WebElement firstName = row.findElement(By.xpath("./td[3]"));
+			String name = firstName.getText();
+			WebElement lastName = row.findElement(By.xpath("./td[2]"));
+			String lastname = lastName.getText();
+			contacts.add(new ContactData().withName(name).withLastname(lastname));
+		}
+		return contacts;		
+	}
+	
+// -----------------------------------------------------------------------------------------------------------------	
 
 	public ContactHelper fillContactForm(ContactData contact, boolean formType) {
 		type(By.name("firstname"), contact.getName());
@@ -35,7 +57,8 @@ public class ContactHelper extends HelperBase {
 	    selectByText(By.name("bmonth"), contact.getBmonth());
 	    type(By.name("byear"), contact.getByear());
 	    if (formType == CREATION) {
-	    	// selectByText(By.name("new_group"), "group 1");
+	    
+	    //	 selectByText(By.name("new_group"), "null");
 	    	} else {
 	    		if (driver.findElements(By.name("new_group")).size() !=0) {
 	    			throw new Error("Group selector exists in contact modification form");
@@ -48,6 +71,10 @@ public class ContactHelper extends HelperBase {
 		return this;
 	}
 
+	public ContactHelper initContactCreation() {
+		click(By.linkText("add new"));
+		return this;
+	}
 	
 	public ContactHelper submitContactCreation() {
 		click(By.name("submit"));
@@ -55,7 +82,7 @@ public class ContactHelper extends HelperBase {
 	}
 
 	public ContactHelper initContactModification(int index) {
-	    selectContact(index);
+		selectContact(index);
 	    return this;
 	}
 
@@ -77,19 +104,9 @@ public class ContactHelper extends HelperBase {
 		return this;
 	}
 
-	public List<ContactData> getContacts() {
-		List<ContactData> contacts = new ArrayList<ContactData>();
-		List<WebElement> tableRows = driver.findElements(By.xpath("//table//tr[@name='entry']"));
-		for (WebElement row : tableRows) {
-			WebElement firstName = row.findElement(By.xpath("./td[3]"));
-			String name = firstName.getText();
-			WebElement lastName = row.findElement(By.xpath("./td[2]"));
-			String lastname = lastName.getText();
-			contacts.add(new ContactData().withName(name).withLastname(lastname));
-		
-		}
-		return contacts;		
+	public ContactHelper returnMainPage() {
+		click(By.linkText("home page"));
+	return this;
 	}
+
 }
-
-

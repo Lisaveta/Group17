@@ -1,13 +1,10 @@
 package com.example.tests;
 
-import static com.example.fw.ContactHelper.CREATION;
+import static com.example.fw.ContactHelper.MODIFICATION;
 import static org.testng.Assert.assertEquals;
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class ContactModificationTests extends TestBase{
@@ -23,11 +20,9 @@ public class ContactModificationTests extends TestBase{
 
     
     app.getContactHelper().initContactModification(index);
-	
-	contact.setName("новое имя");
-	contact.setLastname("новая фамилия");
-	app.getContactHelper().fillContactForm(contact, CREATION);
-	app.getContactHelper().submitContactModification();
+    app.getContactHelper()
+	.fillContactForm(contact, MODIFICATION)
+	.submitContactModification();
     app.navigateTo().returnMainPage();
 
     //save new state
@@ -38,7 +33,5 @@ public class ContactModificationTests extends TestBase{
     oldList.add(contact);
     Collections.sort(oldList);
     assertEquals(newList, oldList);
-	
 	}
-	
 }
