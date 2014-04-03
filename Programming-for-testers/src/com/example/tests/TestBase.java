@@ -47,18 +47,18 @@ public class TestBase {
 		public Iterator<Object[]>randomValidContactGenerator(){
 			List<Object[]> list = new ArrayList<Object[]>();
 			for (int i = 0; i < 5; i++){
-			ContactData contact = new ContactData();
-			contact.name = generateRandomString();
-			contact.lastname = generateRandomString();
-			contact.address = generateRandomString();
-			contact.phone1 = generateRandomPhone();
-			contact.phone3 = generateRandomPhone();
-			contact.wphone1 = generateRandomPhone();
-			contact.mail1 = generateRandomEmail();
-			contact.mail2 = generateRandomEmail();
-			contact.byear = generateRandomString();	
-			contact.address2 = generateRandomString();
-			contact.phone2 = generateRandomPhone();
+			ContactData contact = new ContactData()
+			.withName(generateRandomString())
+			.withLastname(generateRandomString())
+			.withAddress(generateRandomString())
+			.withPhone1(generateRandomPhone())
+			.withPhone3(generateRandomPhone())
+			.withWphone1(generateRandomPhone())
+			.withMail1(generateRandomEmail())
+			.withMail2(generateRandomEmail())
+			.withByear(generateRandomString())
+			.withAddress2(generateRandomString())
+			.withPhone2(generateRandomPhone());
 			list.add(new Object[]{contact});
 		}
 				

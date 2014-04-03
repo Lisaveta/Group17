@@ -4,6 +4,9 @@ import java.util.Collections;
 import java.util.List;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
+
+import com.example.fw.ContactHelper;
+
 import static com.example.fw.ContactHelper.CREATION;
 
 public class ContactCreationTests extends TestBase {
@@ -14,16 +17,17 @@ public class ContactCreationTests extends TestBase {
 	app.navigateTo().mainPage();
 	
 	// save old state
-	List<ContactData> oldList = app.getContactHelper().getContacts();
+	ContactHelper contactHelper = app.getContactHelper();
+	List<ContactData> oldList = contactHelper.getContacts();
 	
 	// actions
-    app.getContactHelper().initContactCreation();
-    app.getContactHelper().fillContactForm(contact, CREATION);
-    app.getContactHelper().submitContactCreation();
+    contactHelper.initContactCreation();
+    contactHelper.fillContactForm(contact, CREATION);
+    contactHelper.submitContactCreation();
     app.navigateTo().returnMainPage();
 
     //save new state
-   List<ContactData> newList = app.getContactHelper().getContacts();
+   List<ContactData> newList = contactHelper.getContacts();
     // compare states
   
     oldList.add(contact);

@@ -2,19 +2,19 @@ package com.example.tests;
 
 public class ContactData implements Comparable<ContactData> {
 	
-	public String name;
-	public String lastname;
-	public String address;
-	public String phone1;
-	public String phone3;
-	public String wphone1;
-	public String mail1;
-	public String mail2;
-	public String bday;
-	public String bmonth;
-	public String byear;
-	public String address2;
-	public String phone2;
+	private String name;
+	private String lastname;
+	private String address;
+	private String phone1;
+	private String phone3;
+	private String wphone1;
+	private String mail1;
+	private String mail2;
+	private String bday;
+	private String bmonth;
+	private String byear;
+	private String address2;
+	private String phone2;
 	
 	public ContactData(){
 	}
@@ -23,8 +23,8 @@ public class ContactData implements Comparable<ContactData> {
 			String phone1, String phone3, String wphone1, String mail1,
 			String mail2, String bday, String bmonth, String byear,
 			String address2, String phone2) {
-		this.name = name;
-		this.lastname = lastname;
+		this.setName(name);
+		this.setLastname(lastname);
 		this.address = address;
 		this.phone1 = phone1;
 		this.phone3 = phone3;
@@ -40,7 +40,7 @@ public class ContactData implements Comparable<ContactData> {
 //  что бы было удобно читать, чтобы можно было объект "напечатать" на консоль или в лог-файл
 	@Override
 	public String toString() {
-		return "ContactData [name=" + name + ", lastname=" + lastname
+		return "ContactData [name=" + getName() + ", lastname=" + getLastname()
 				+ "]";
 	}
 // equals чтобы сравнивать на "равно-не равно"
@@ -54,15 +54,15 @@ public class ContactData implements Comparable<ContactData> {
 		if (getClass() != obj.getClass())
 			return false;
 		ContactData other = (ContactData) obj;
-		if (lastname == null) {
-			if (other.lastname != null)
+		if (getLastname() == null) {
+			if (other.getLastname() != null)
 				return false;
-		} else if (!lastname.equals(other.lastname))
+		} else if (!getLastname().equals(other.getLastname()))
 			return false;
-		if (name == null) {
-			if (other.name != null)
+		if (getName() == null) {
+			if (other.getName() != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!getName().equals(other.getName()))
 			return false;
 		return true;
 	}
@@ -82,7 +82,122 @@ public class ContactData implements Comparable<ContactData> {
 	// чтобы сравнивать на "больше-меньше", то есть определять порядок (упорядочение)
 	@Override
 	public int compareTo(ContactData other) {
-		return this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
+		return this.getLastname().toLowerCase().compareTo(other.getLastname().toLowerCase());
+	}
+
+	public ContactData withName(String name) {
+		this.setName(name);
+		return this;
+	}
+
+	public ContactData withLastname(String lastname) {
+		this.setLastname(lastname);
+		return this;
+	}
+
+	public ContactData withAddress(String address) {
+		this.address = address;
+		return this;
+	}
+
+	public ContactData withPhone1(String phone1) {
+		this.phone1 = phone1;
+		return this;
+	}
+
+	public ContactData withPhone3(String phone3) {
+		this.phone3 = phone3;
+		return this;
+	}
+
+	public ContactData withWphone1(String wphone1) {
+		this.wphone1 = wphone1;
+		return this;
+	}
+
+	public ContactData withMail1(String mail1) {
+		this.mail1 = mail1;
+		return this;
+	}
+
+	public ContactData withMail2(String mail2) {
+		this.mail2 = mail2;
+		return this;
+	}
+
+	public ContactData withByear(String byear) {
+		this.byear = byear;
+		return this;
+	}
+
+	public ContactData withAddress2(String address2) {
+		this.address2 = address2;
+		return this;
+	}
+
+	public ContactData withPhone2(String phone2) {
+		this.phone2 = phone2;
+		return this;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public String getPhone1() {
+		return phone1;
+	}
+
+	public String getPhone3() {
+		return phone3;
+	}
+
+	public String getWphone1() {
+		return wphone1;
+	}
+
+	public String getMail1() {
+		return mail1;
+	}
+
+	public String getMail2() {
+		return mail2;
+	}
+
+	public String getBday() {
+		return bday;
+	}
+
+	public String getBmonth() {
+		return bmonth;
+	}
+
+	public String getByear() {
+		return byear;
+	}
+
+	public String getAddress2() {
+		return address2;
+	}
+
+	public String getPhone2() {
+		return phone2;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 }

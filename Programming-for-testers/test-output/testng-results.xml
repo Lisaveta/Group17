@@ -2,71 +2,71 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22974" started-at="2014-03-30T10:52:25Z" finished-at="2014-03-30T10:52:48Z">
+  <suite name="Default suite" duration-ms="83808" started-at="2014-04-03T05:04:22Z" finished-at="2014-04-03T05:05:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22974" started-at="2014-03-30T10:52:25Z" finished-at="2014-03-30T10:52:48Z">
+    <test name="Default test" duration-ms="83808" started-at="2014-04-03T05:04:22Z" finished-at="2014-04-03T05:05:46Z">
       <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@13fe849]" name="setUp" is-config="true" duration-ms="5762" started-at="2014-03-30T17:52:25Z" finished-at="2014-03-30T17:52:31Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@1c97c3e]" name="setUp" is-config="true" duration-ms="6755" started-at="2014-04-03T12:04:22Z" finished-at="2014-04-03T12:04:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@13fe849]" name="testContactCreationWithValidData" duration-ms="3522" started-at="2014-03-30T17:52:31Z" data-provider="randomValidContactGenerator" finished-at="2014-03-30T17:52:34Z">
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1c97c3e]" name="testContactCreationWithValidData" duration-ms="6030" started-at="2014-04-03T12:04:29Z" data-provider="randomValidContactGenerator" finished-at="2014-04-03T12:04:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ContactData [name=test-1021436285, lastname=test-1387181062]]]>
+                <![CDATA[ContactData [name=test-629071631, lastname=test-380030246]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@13fe849]" name="testContactCreationWithValidData" duration-ms="3197" started-at="2014-03-30T17:52:34Z" data-provider="randomValidContactGenerator" finished-at="2014-03-30T17:52:37Z">
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1c97c3e]" name="testContactCreationWithValidData" duration-ms="7346" started-at="2014-04-03T12:04:35Z" data-provider="randomValidContactGenerator" finished-at="2014-04-03T12:04:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ContactData [name=test1927920466, lastname=test-1316681276]]]>
+                <![CDATA[ContactData [name=test1621471907, lastname=test2118055282]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@13fe849]" name="testContactCreationWithValidData" duration-ms="3428" started-at="2014-03-30T17:52:37Z" data-provider="randomValidContactGenerator" finished-at="2014-03-30T17:52:41Z">
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1c97c3e]" name="testContactCreationWithValidData" duration-ms="15735" started-at="2014-04-03T12:04:42Z" data-provider="randomValidContactGenerator" finished-at="2014-04-03T12:04:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ContactData [name=test1566065364, lastname=test-620240112]]]>
+                <![CDATA[ContactData [name=test-392443577, lastname=test-1345859125]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@13fe849]" name="testContactCreationWithValidData" duration-ms="3380" started-at="2014-03-30T17:52:41Z" data-provider="randomValidContactGenerator" finished-at="2014-03-30T17:52:44Z">
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1c97c3e]" name="testContactCreationWithValidData" duration-ms="24124" started-at="2014-04-03T12:04:58Z" data-provider="randomValidContactGenerator" finished-at="2014-04-03T12:05:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ContactData [name=test-1212033311, lastname=test-2194812]]]>
+                <![CDATA[ContactData [name=test419476696, lastname=test515972925]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@13fe849]" name="testContactCreationWithValidData" duration-ms="3512" started-at="2014-03-30T17:52:44Z" data-provider="randomValidContactGenerator" finished-at="2014-03-30T17:52:48Z">
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1c97c3e]" name="testContactCreationWithValidData" duration-ms="23593" started-at="2014-04-03T12:05:22Z" data-provider="randomValidContactGenerator" finished-at="2014-04-03T12:05:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ContactData [name=test-2144031390, lastname=test-988523333]]]>
+                <![CDATA[ContactData [name=test303484175, lastname=test1909869189]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@13fe849]" name="tearDown" is-config="true" duration-ms="166" started-at="2014-03-30T17:52:48Z" finished-at="2014-03-30T17:52:48Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@1c97c3e]" name="tearDown" is-config="true" duration-ms="215" started-at="2014-04-03T12:05:46Z" finished-at="2014-04-03T12:05:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
