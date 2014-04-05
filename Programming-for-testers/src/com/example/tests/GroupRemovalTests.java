@@ -11,10 +11,9 @@ public class GroupRemovalTests extends TestBase{
 
 	@Test
 	public void deleteSomeGroup() {
-    //save old state 
-    // будет возвращать список имеющихся групп (список объектов типа groupData)
-    
-		SortedListOf<GroupData> oldList = app.getGroupHelper().getGroups();
+   
+		//save old state 
+ 	SortedListOf<GroupData> oldList = app.getGroupHelper().getGroups();
     
     Random rnd = new Random();
     int index = rnd.nextInt(oldList.size() - 1);

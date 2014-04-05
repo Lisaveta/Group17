@@ -19,7 +19,6 @@ public class ApplicationManager {
 	  baseUrl = "http://localhost/";
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  driver.get(baseUrl + "/addressbookv4.1.4/");
-
 	}
 
 	public void stop() {
@@ -36,14 +35,14 @@ public class ApplicationManager {
 	public GroupHelper getGroupHelper() {
 	if (groupHelper == null) {
 		groupHelper = new GroupHelper(this);
-	}
-	return groupHelper;
 		}
+	return groupHelper;
+}
 
 	public ContactHelper getContactHelper() {
 	if (contactHelper == null) {
 		contactHelper = new ContactHelper(this);
-	}
+		}
 	return contactHelper;
 		}
 }

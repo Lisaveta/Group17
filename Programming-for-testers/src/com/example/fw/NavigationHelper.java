@@ -12,13 +12,14 @@ public class NavigationHelper extends HelperBase {
 	public void mainPage() {
 		if (! onMainPage()){
 		click(By.linkText("home"));
-
 		}
 }
 	private boolean onMainPage() {
 		return (driver.findElements(By.id("maintable")).size() > 0);
 	}
-
+	
+	//http://localhost/addressbookv4.1.4/
+	
 	public void groupsPage() {
 		if (! onGroupsPage()) {
 			click(By.linkText("groups"));
