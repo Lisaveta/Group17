@@ -1,8 +1,11 @@
 package com.example.fw;
 
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class ApplicationManager {
 	
@@ -12,14 +15,26 @@ public class ApplicationManager {
 	private NavigationHelper navigationHelper;
 	private GroupHelper groupHelper;
 	private ContactHelper contactHelper;
+	private Properties properties;
 	
 
-	public ApplicationManager() {
+	public ApplicationManager(Properties properties) {
+	  this.properties = properties;
+	  String browser = properties.getProperty("browser");
+	  if ("firefox".equals(browser)) {
 	  driver = new FirefoxDriver();
-	  baseUrl = "http://localhost/";
+	  }else if ("ie".equals(browser)){
+	  driver = new InternetExplorerDriver(); 
+//	  }else if ("chrome".equals(browser)){
+//	  driver = new ChromeDriver(); 
+	  }else{
+		  throw new Error("неподдерживаемый браузер:" + browser);
+	  }
+	  baseUrl = properties.getProperty("baseUrl");
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	  driver.get(baseUrl + "/addressbookv4.1.4/");
+	  driver.get(baseUrl);
 	}
+
 
 	public void stop() {
 	    driver.quit();

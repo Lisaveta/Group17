@@ -4,9 +4,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 import java.util.Random;
 import static com.example.tests.GroupDataGenerator.generateRandomGroups;
 import org.testng.annotations.AfterTest;
@@ -20,14 +26,14 @@ public class TestBase {
 	protected static ApplicationManager app;
 
 	
-	@BeforeMethod
 	@BeforeTest
 	public void setUp() throws Exception {
-	app = new ApplicationManager();
+		Properties properties = new Properties();
+		properties.load(new FileReader(new File("application.properties"))); 
+		app = new ApplicationManager(properties);
 	}
 
 	
-	@AfterMethod
 	@AfterTest
 	public void tearDown() throws Exception {
 	app.stop();	

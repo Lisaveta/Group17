@@ -1,15 +1,28 @@
 package com.example.tests;
 
+import static com.example.tests.GroupDataGenerator.loadGroupsFromXmlFile;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 import static org.testng.Assert.assertEquals;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
 import java.util.Random;
 import com.example.utils.SortedListOf;
+
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class GroupModificationTests extends TestBase{
-
-	@Test(dataProvider = "randomValidGroupsGenerator")
+	
+	
+	@DataProvider
+	public Iterator<Object[]> groupsFromFile() throws IOException{
+	return wrapGroupDataForProvider(loadGroupsFromXmlFile(new File("groups.xml"))).iterator();
+	}
+	
+	@Test(dataProvider = "groupsFromFile")
 	public void modifySomeGroup(GroupData group) {
     //save old state 
     // будет возвращать список имеющихся групп (список объектов типа groupData)
