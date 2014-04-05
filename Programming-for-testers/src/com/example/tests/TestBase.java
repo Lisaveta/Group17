@@ -30,7 +30,7 @@ public class TestBase {
 	public void setUp() throws Exception {
 		String configFile = System.getProperty("configFile", "application.properties");
 		Properties properties = new Properties();
-		properties.load(new FileReader(new File("configFile"))); 
+		properties.load(new FileReader(new File(configFile))); 
 		app = new ApplicationManager(properties);
 	}
 
