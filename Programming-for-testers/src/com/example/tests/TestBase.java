@@ -42,52 +42,12 @@ public class TestBase {
 		return list;
 	}
 
-
-	@DataProvider
-		public Iterator<Object[]>randomValidContactGenerator(){
-			List<Object[]> list = new ArrayList<Object[]>();
-			for (int i = 0; i < 5; i++){
-			ContactData contact = new ContactData()
-			.withName(generateRandomString())
-			.withLastname(generateRandomString())
-			.withAddress(generateRandomString())
-			.withPhone1(generateRandomPhone())
-			.withPhone3(generateRandomPhone())
-			.withWphone1(generateRandomPhone())
-			.withMail1(generateRandomEmail())
-			.withMail2(generateRandomEmail())
-			.withByear(generateRandomString())
-			.withAddress2(generateRandomString())
-			.withPhone2(generateRandomPhone());
+	public static List<Object[]> wrapContactDataForProvider(List<ContactData> contacts) {
+		List<Object[]> list = new ArrayList<Object[]>();
+		for (ContactData contact : contacts) {
 			list.add(new Object[]{contact});
 		}
-				
-		return list.iterator();
+		return list;
 	}
-// для групп больше не нужен. когда буду переделывать для контактов - удалить
-		public String generateRandomString(){
-			Random rnd = new Random();
-//			if (rnd.nextInt(3) == 0) {
-//				return "";
-//			}else{
-				return "test" + rnd.nextInt();
-			}
-		
-		public String generateRandomEmail(){
-			Random rnd = new Random();
-//			if (rnd.nextInt(3) == 0) {
-//				return "";
-//			}else{
-				return rnd.nextInt() +"@mail.ru";
-			}
-		public String generateRandomPhone(){
-			Random rnd = new Random();
-//			if (rnd.nextInt(3) == 0) {
-//				return "";
-//			}else{
-				return "+7" + rnd.nextInt();
-			}
-
-
 }
 

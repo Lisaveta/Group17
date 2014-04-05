@@ -4,6 +4,7 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Selenium"/>
 	<classpathentry kind="lib" path="D:/Обучение/Программирование для тестировщиков/Distrib/selenium-server-standalone-2.39.0.jar"/>
-	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/XStream"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
