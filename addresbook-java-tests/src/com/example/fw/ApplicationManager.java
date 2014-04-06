@@ -17,6 +17,8 @@ public class ApplicationManager {
 
 	private JFrameOperator mainFrame;
 
+	private MenuHelper menuHelper;
+
 	public static ApplicationManager getInstance(){
 		if (singleton == null) {
 			singleton = new ApplicationManager();
@@ -25,6 +27,7 @@ public class ApplicationManager {
 	}
 	
 	public void stop() {
+		getApplication().requestClose();
 	  }	
 	
 	public void setProperties (Properties props) {
@@ -54,4 +57,12 @@ public class ApplicationManager {
 	}
 		return mainFrame;
 	}
+
+	public MenuHelper getMenuHelper() {
+		if (menuHelper == null) {
+			menuHelper = new MenuHelper(this);
+	}
+			return menuHelper;
+	}
 }
+
