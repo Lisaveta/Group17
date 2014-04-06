@@ -8,6 +8,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class ApplicationManager {
+	private static ApplicationManager singleton;
+	public static ApplicationManager getInstance(){
+		if (singleton == null) {
+			singleton = new ApplicationManager();
+		}
+		return singleton;
+	}
 	
 	public WebDriver driver;
 	public String baseUrl;
@@ -33,6 +40,11 @@ public class ApplicationManager {
 	  baseUrl = properties.getProperty("baseUrl");
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  driver.get(baseUrl);
+	}
+
+
+	public ApplicationManager() {
+		// TODO Auto-generated constructor stub
 	}
 
 
