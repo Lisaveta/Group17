@@ -7,5 +7,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Jemmy2"/>
 	<classpathentry kind="lib" path="D:/Обучение/Программирование для тестировщиков/forLesson6/jemmy/jemmy.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/AddressBook"/>
+	<classpathentry kind="lib" path="D:/Обучение/Программирование для тестировщиков/forLesson6/AddressBook-14-42/AddressBook/lib/addressbook.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

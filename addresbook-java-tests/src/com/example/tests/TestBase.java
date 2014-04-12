@@ -1,18 +1,12 @@
 package com.example.tests;
 
-import java.io.File;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 import java.util.logging.Logger;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
 import com.example.fw.ApplicationManager;
 
 public class TestBase {
@@ -24,14 +18,15 @@ public class TestBase {
 	@BeforeClass
 	@Parameters({"configFile"})
 	public void setUp(@Optional String configFile) throws Exception {
-		if (configFile == null) {
+			
+			if (configFile == null) {
 			configFile = System.getProperty("configFile");
 		}
 			if (configFile == null) {
 				configFile = System.getenv("configFile");
 			}
 			if (configFile == null) {
-				configFile = System.getenv("application.properties");
+				configFile = "application.properties";
 			}
 		Properties props = new Properties();
 		props.load(new FileReader(configFile));

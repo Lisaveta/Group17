@@ -1,24 +1,16 @@
 package com.example.fw;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import org.netbeans.jemmy.ClassReference;
 import org.netbeans.jemmy.operators.JFrameOperator;
-import org.testng.reporters.jq.Main;
 
 public class ApplicationManager {
-	
+	//singleton - единстенный экземпл€р
 	private static ApplicationManager singleton;
-
 	private Properties props;
-
 	private FolderHelper folderHelper;
-
 	private JFrameOperator mainFrame;
-
 	private MenuHelper menuHelper;
-
 	public static ApplicationManager getInstance(){
 		if (singleton == null) {
 			singleton = new ApplicationManager();
@@ -44,7 +36,8 @@ public class ApplicationManager {
 	}
 			return folderHelper;
 	}
-//JFrame стандартный класс java который отрисовывает окошечки; JFrameOperator - обертка, котора€ позвол€ет управл€ть этим фреймом
+//JFrame стандартный класс java который отрисовывает окна; 
+//JFrameOperator - обертка, котора€ позвол€ет управл€ть этим фреймом
 	public JFrameOperator getApplication() {
 		if (mainFrame == null) {
 		try {
