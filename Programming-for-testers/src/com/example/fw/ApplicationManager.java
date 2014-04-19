@@ -23,6 +23,7 @@ public class ApplicationManager {
 	private GroupHelper groupHelper;
 	private ContactHelper contactHelper;
 	private Properties properties;
+	private Object hibernateHelper;
 	
 
 	public ApplicationManager(Properties properties) {
@@ -71,5 +72,12 @@ public class ApplicationManager {
 		contactHelper = new ContactHelper(this);
 		}
 	return contactHelper;
+		}
+	
+	public HibernateHelper getHibernateHelper() {
+	if (hibernateHelper == null) {
+		hibernateHelper = new HibernateHelper(this);
+		}
+	return hibernateHelper;
 		}
 }
