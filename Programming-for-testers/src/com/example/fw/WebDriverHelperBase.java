@@ -7,17 +7,21 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public abstract class HelperBase {
+public abstract class WebDriverHelperBase extends HelperBase{
 
 	protected ApplicationManager manager;
 	protected WebDriver driver;
 	public boolean acceptNextAlert = true;
+	private WebDriverWait wait;
 	
-	public HelperBase(ApplicationManager manager) {
+	public WebDriverHelperBase(ApplicationManager manager) {
+		super(manager);
 		this.manager = manager;
 		this.driver = manager.driver;
-  }
+		wait = new WebDriverWait(driver, 10);
+}
 	public boolean isElementPresent(By by) {
 	    try {
 	      findElement(by);

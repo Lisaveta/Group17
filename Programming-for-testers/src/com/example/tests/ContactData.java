@@ -1,7 +1,7 @@
 package com.example.tests;
 
 public class ContactData implements Comparable<ContactData> {
-	
+	private String id;
 	private String name;
 	private String lastname;
 	private String address;
@@ -83,6 +83,101 @@ public class ContactData implements Comparable<ContactData> {
 	@Override
 	public int compareTo(ContactData other) {
 		return this.getLastname().toLowerCase().compareTo(other.getLastname().toLowerCase());
+	}
+	public ContactData withId(String id) {
+		this.id = id;
+		return this;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	/**
+	 * @param phone1 the phone1 to set
+	 */
+	public void setPhone1(String phone1) {
+		this.phone1 = phone1;
+	}
+
+	/**
+	 * @param phone3 the phone3 to set
+	 */
+	public void setPhone3(String phone3) {
+		this.phone3 = phone3;
+	}
+
+	/**
+	 * @param wphone1 the wphone1 to set
+	 */
+	public void setWphone1(String wphone1) {
+		this.wphone1 = wphone1;
+	}
+
+	/**
+	 * @param mail1 the mail1 to set
+	 */
+	public void setMail1(String mail1) {
+		this.mail1 = mail1;
+	}
+
+	/**
+	 * @param mail2 the mail2 to set
+	 */
+	public void setMail2(String mail2) {
+		this.mail2 = mail2;
+	}
+
+	/**
+	 * @param bday the bday to set
+	 */
+	public void setBday(String bday) {
+		this.bday = bday;
+	}
+
+	/**
+	 * @param bmonth the bmonth to set
+	 */
+	public void setBmonth(String bmonth) {
+		this.bmonth = bmonth;
+	}
+
+	/**
+	 * @param byear the byear to set
+	 */
+	public void setByear(String byear) {
+		this.byear = byear;
+	}
+
+	/**
+	 * @param address2 the address2 to set
+	 */
+	public void setAddress2(String address2) {
+		this.address2 = address2;
+	}
+
+	/**
+	 * @param phone2 the phone2 to set
+	 */
+	public void setPhone2(String phone2) {
+		this.phone2 = phone2;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
 	}
 
 	public ContactData withName(String name) {

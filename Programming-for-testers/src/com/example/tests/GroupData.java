@@ -2,6 +2,7 @@ package com.example.tests;
 
 public class GroupData implements Comparable<GroupData>{
 	// элементы типа GroupData можно сравнивать с другими элементами типа GroupData
+	private String id;
 	private String name;
 	private String header;
 	private String footer;
@@ -52,6 +53,46 @@ public class GroupData implements Comparable<GroupData>{
 	@Override
 	public int compareTo(GroupData other) {
 		return this.name.toLowerCase().compareTo(other.name.toLowerCase());
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @param header the header to set
+	 */
+	public void setHeader(String header) {
+		this.header = header;
+	}
+
+	/**
+	 * @param footer the footer to set
+	 */
+	public void setFooter(String footer) {
+		this.footer = footer;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+
+	public GroupData withId(String id) {
+		this.id = id;
+		return this;
 	}
 
 	public GroupData withName(String name) {
