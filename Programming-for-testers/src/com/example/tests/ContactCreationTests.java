@@ -26,6 +26,7 @@ public class ContactCreationTests extends TestBase {
 	app.navigateTo().mainPage();
 	
 	// save old state
+	// SortedListOf<ContactData> oldList = (SortedListOf<ContactData>) app.getContactHelper().getContacts();
 	  SortedListOf<ContactData> oldList = 
 			  new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
 	
@@ -33,7 +34,10 @@ public class ContactCreationTests extends TestBase {
 	app.getContactHelper().createContact(contact);
  
     //save new state
-	SortedListOf<ContactData> newList = (SortedListOf<ContactData>) app.getContactHelper().getContacts();
+	//SortedListOf<ContactData> newList = (SortedListOf<ContactData>) app.getContactHelper().getContacts();
+	SortedListOf<ContactData> newList = 
+			  new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
+	
   
    // compare states
 	assertThat(newList, equalTo(oldList.withAdded(contact)));

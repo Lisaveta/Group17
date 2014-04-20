@@ -6,9 +6,9 @@
  <property name="name" column="contact_name" />
  <property name="lastname" column="contact_lastname" />
  <property name="phone1" column="contact_phone1" />
+ <property name="mail1" column="contact_mail1" />
  <property name="phone3" column="contact_phone3" />
  <property name="wphone1" column="contact_wphone1" />
- <property name="mail1" column="contact_mail1" />
  <property name="mail2" column="contact_mail2" />
  <property name="bday" column="contact_bday" />
  <property name="bmonth" column="contact_bmonth" />

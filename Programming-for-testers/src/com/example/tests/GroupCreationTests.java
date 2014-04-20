@@ -26,14 +26,15 @@ public class GroupCreationTests extends TestBase {
 	public void testValidGroupCreationWishValidData(GroupData group) throws Exception {
     //save old state 
     // будет возвращать список имеющихся групп (список объектов типа groupData)
-    
-	SortedListOf<GroupData> oldList 
+    //SortedListOf<GroupData> oldList = app.getGroupHelper().getGroups();
+	// получаем данные из БД
+		SortedListOf<GroupData> oldList 
 	= new SortedListOf<GroupData>(app.getHibernateHelper().listGroups());
     
     // actions
     app.getGroupHelper().createGroup(group);
    
-    // save new state
+    // save new state получаем данные через пользовательский интерфейс
     SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();  
     
     // compare states
