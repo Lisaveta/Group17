@@ -28,7 +28,8 @@ public class GroupModificationTests extends TestBase{
     // будет возвращать список имеющихся групп (список объектов типа groupData)
     
 	SortedListOf<GroupData> oldList = app.getGroupHelper().getGroups();
- 
+	
+
     Random rnd = new Random();
     int index = rnd.nextInt(oldList.size() - 1);
    
@@ -36,8 +37,11 @@ public class GroupModificationTests extends TestBase{
     app.getGroupHelper().modifyGroup(index, group);
  
 	// save new state
-    SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();  
+    //SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();  
+    	SortedListOf<GroupData> newList 
+		= new SortedListOf<GroupData>(app.getHibernateHelper().listGroups());
 
+	
     // compare states
     assertThat(newList, equalTo(oldList.without(index).withAdded(group)));
 	}

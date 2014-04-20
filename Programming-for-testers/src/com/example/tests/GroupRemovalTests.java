@@ -23,7 +23,9 @@ public class GroupRemovalTests extends TestBase{
 
  
 	// save new state
-    SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();  
+    //SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();  
+	SortedListOf<GroupData> newList 
+	= new SortedListOf<GroupData>(app.getHibernateHelper().listGroups());
 
     // compare states
     assertThat(newList, equalTo(oldList.without(index)));
