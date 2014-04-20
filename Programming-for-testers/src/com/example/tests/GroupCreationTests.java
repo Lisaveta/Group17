@@ -27,7 +27,8 @@ public class GroupCreationTests extends TestBase {
     //save old state 
     // будет возвращать список имеющихся групп (список объектов типа groupData)
     
-	SortedListOf<GroupData> oldList = app.getGroupHelper().getGroups();
+	SortedListOf<GroupData> oldList 
+	= new SortedListOf<GroupData>(app.getHibernateHelper().listGroups());
     
     // actions
     app.getGroupHelper().createGroup(group);

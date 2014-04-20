@@ -78,6 +78,6 @@ public class ApplicationManager {
 	if (hibernateHelper == null) {
 		hibernateHelper = new HibernateHelper(this);
 		}
-	return hibernateHelper;
+	return (HibernateHelper) hibernateHelper;
 		}
 }

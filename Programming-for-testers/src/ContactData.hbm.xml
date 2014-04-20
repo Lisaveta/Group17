@@ -2,10 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping>
  <class name="com.example.tests.ContactData" table="contact_list">
- <id name="id" column="group_id" ></id>
+ <id name="id" column="contact_id" ></id>
  <property name="name" column="contact_name" />
  <property name="lastname" column="contact_lastname" />
- <property name="address" column="contact_address" />
  <property name="phone1" column="contact_phone1" />
  <property name="phone3" column="contact_phone3" />
  <property name="wphone1" column="contact_wphone1" />

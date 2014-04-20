@@ -26,7 +26,8 @@ public class ContactCreationTests extends TestBase {
 	app.navigateTo().mainPage();
 	
 	// save old state
-	  SortedListOf<ContactData> oldList = (SortedListOf<ContactData>) app.getContactHelper().getContacts();
+	  SortedListOf<ContactData> oldList = 
+			  new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
 	
 	// actions
 	app.getContactHelper().createContact(contact);
