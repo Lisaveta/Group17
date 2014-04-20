@@ -1,6 +1,7 @@
 package com.example.tests;
 
 public class ContactData implements Comparable<ContactData> {
+	
 	private String id;
 	private String name;
 	private String lastname;
