@@ -1,32 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="10" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14603" started-at="2014-04-05T12:28:37Z" finished-at="2014-04-05T12:28:51Z">
+  <suite name="Default suite" duration-ms="20923" started-at="2014-04-19T10:49:42Z" finished-at="2014-04-19T10:50:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14603" started-at="2014-04-05T12:28:37Z" finished-at="2014-04-05T12:28:51Z">
-      <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@1dd0fe7]" name="setUp" is-config="true" duration-ms="5150" started-at="2014-04-05T19:28:37Z" finished-at="2014-04-05T19:28:42Z">
+    <test name="Default test" duration-ms="20923" started-at="2014-04-19T10:49:42Z" finished-at="2014-04-19T10:50:03Z">
+      <class name="com.example.tests.GroupCreationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="setUp" is-config="true" duration-ms="7125" started-at="2014-04-19T17:49:42Z" finished-at="2014-04-19T17:49:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1dd0fe7]" name="testContactCreationWithValidData" duration-ms="9204" started-at="2014-04-05T19:28:42Z" data-provider="contactsFromFile" finished-at="2014-04-05T19:28:51Z">
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="2104" started-at="2014-04-19T17:49:50Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:49:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ContactData [name=test-1514309022, lastname=test-1997665789]]]>
+                <![CDATA[GroupData [name=test-2021756154, header=test-727190444, footer=test-1531914511]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@1dd0fe7]" name="tearDown" is-config="true" duration-ms="124" started-at="2014-04-05T19:28:51Z" finished-at="2014-04-05T19:28:51Z">
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="1150" started-at="2014-04-19T17:49:52Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:49:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [name=, header=, footer=test1143517933]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="1200" started-at="2014-04-19T17:49:53Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:49:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [name=test-1705771011, header=, footer=test1463834060]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="1260" started-at="2014-04-19T17:49:54Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:49:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [name=test-2067386060, header=test-793278132, footer=test212984328]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="1279" started-at="2014-04-19T17:49:55Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:49:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [name=test-1175777948, header=test883199876, footer=test-1863412256]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="1385" started-at="2014-04-19T17:49:57Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:49:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [name=test140312445, header=test1164143982, footer=test-912471901]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="1314" started-at="2014-04-19T17:49:58Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:49:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [name=test2082046682, header=test-122400747, footer=test-1012572383]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="1224" started-at="2014-04-19T17:49:59Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:50:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [name=, header=test-200406403, footer=]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="1249" started-at="2014-04-19T17:50:01Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:50:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [name=, header=test-662500049, footer=test816503402]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="testValidGroupCreationWishValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="testValidGroupCreationWishValidData" duration-ms="1298" started-at="2014-04-19T17:50:02Z" data-provider="groupsFromFile" finished-at="2014-04-19T17:50:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GroupData [name=, header=test1360099012, footer=]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidGroupCreationWishValidData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@120f0be]" name="tearDown" is-config="true" duration-ms="172" started-at="2014-04-19T17:50:03Z" finished-at="2014-04-19T17:50:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.ContactCreationTests -->
+      </class> <!-- com.example.tests.GroupCreationTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

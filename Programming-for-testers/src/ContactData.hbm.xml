@@ -3,9 +3,19 @@
 <hibernate-mapping>
  <class name="com.example.tests.ContactData" table="contact_list">
  <id name="id" column="group_id" ></id>
- <property name="name" column="group_name" />
- <property name="header" column="group_header" />
- <property name="footer" column="group_footer" />
+ <property name="name" column="contact_name" />
+ <property name="lastname" column="contact_lastname" />
+ <property name="address" column="contact_address" />
+ <property name="phone1" column="contact_phone1" />
+ <property name="phone3" column="contact_phone3" />
+ <property name="wphone1" column="contact_wphone1" />
+ <property name="mail1" column="contact_mail1" />
+ <property name="mail2" column="contact_mail2" />
+ <property name="bday" column="contact_bday" />
+ <property name="bmonth" column="contact_bmonth" />
+ <property name="byear" column="contact_byear" />
+ <property name="address2" column="contact_address2" />
+ <property name="phone2" column="contact_phone2" />
  </class>
 </hibernate-mapping>
 
