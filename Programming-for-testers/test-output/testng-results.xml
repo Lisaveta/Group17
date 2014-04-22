@@ -2,31 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14917" started-at="2014-04-22T10:25:52Z" finished-at="2014-04-22T10:26:07Z">
+  <suite name="Default suite" duration-ms="16941" started-at="2014-04-22T10:41:15Z" finished-at="2014-04-22T10:41:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14917" started-at="2014-04-22T10:25:52Z" finished-at="2014-04-22T10:26:07Z">
-      <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@1ae9565]" name="setUp" is-config="true" duration-ms="7976" started-at="2014-04-22T17:25:52Z" finished-at="2014-04-22T17:26:00Z">
+    <test name="Default test" duration-ms="16941" started-at="2014-04-22T10:41:15Z" finished-at="2014-04-22T10:41:32Z">
+      <class name="com.example.tests.ContactRemovalTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactRemovalTests@376cc3]" name="setUp" is-config="true" duration-ms="7297" started-at="2014-04-22T17:41:15Z" finished-at="2014-04-22T17:41:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1ae9565]" name="testContactCreationWithValidData" duration-ms="6575" started-at="2014-04-22T17:26:00Z" data-provider="contactsFromFile" finished-at="2014-04-22T17:26:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ContactData [name=test-1514309022, lastname=test-1997665789]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="deleteSomeContact()[pri:0, instance:com.example.tests.ContactRemovalTests@376cc3]" name="deleteSomeContact" duration-ms="9471" started-at="2014-04-22T17:41:22Z" finished-at="2014-04-22T17:41:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@1ae9565]" name="tearDown" is-config="true" duration-ms="161" started-at="2014-04-22T17:26:07Z" finished-at="2014-04-22T17:26:07Z">
+        </test-method> <!-- deleteSomeContact -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactRemovalTests@376cc3]" name="tearDown" is-config="true" duration-ms="164" started-at="2014-04-22T17:41:32Z" finished-at="2014-04-22T17:41:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.ContactCreationTests -->
+      </class> <!-- com.example.tests.ContactRemovalTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -32,12 +32,17 @@ public class ContactModificationTests extends TestBase{
 	app.getContactHelper().modifyContact(index, contact);
  
     //save new state
-	SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
+	//SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
     
-	//SortedListOf<ContactData> newList 
-	//= new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
+	SortedListOf<ContactData> newList 
+	= new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
 	
 	// compare states
 	assertThat(newList, equalTo(oldList.without(index).withAdded(contact)));
 	}
 }
+//сохранение старого состояния
+//подготовка тестовых данных
+//действия с системой
+//получение нового состояния
+//проверка, сравнение старого и нового
