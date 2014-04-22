@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12762" started-at="2014-04-21T06:39:58Z" finished-at="2014-04-21T06:40:10Z">
+  <suite name="Default suite" duration-ms="14917" started-at="2014-04-22T10:25:52Z" finished-at="2014-04-22T10:26:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12762" started-at="2014-04-21T06:39:58Z" finished-at="2014-04-21T06:40:10Z">
+    <test name="Default test" duration-ms="14917" started-at="2014-04-22T10:25:52Z" finished-at="2014-04-22T10:26:07Z">
       <class name="com.example.tests.ContactCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@1ae9565]" name="setUp" is-config="true" duration-ms="6084" started-at="2014-04-21T13:39:58Z" finished-at="2014-04-21T13:40:04Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@1ae9565]" name="setUp" is-config="true" duration-ms="7976" started-at="2014-04-22T17:25:52Z" finished-at="2014-04-22T17:26:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1ae9565]" name="testContactCreationWithValidData" duration-ms="6409" started-at="2014-04-21T13:40:04Z" data-provider="contactsFromFile" finished-at="2014-04-21T13:40:10Z">
+        <test-method status="PASS" signature="testContactCreationWithValidData(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@1ae9565]" name="testContactCreationWithValidData" duration-ms="6575" started-at="2014-04-22T17:26:00Z" data-provider="contactsFromFile" finished-at="2014-04-22T17:26:07Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactCreationWithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@1ae9565]" name="tearDown" is-config="true" duration-ms="163" started-at="2014-04-21T13:40:10Z" finished-at="2014-04-21T13:40:10Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@1ae9565]" name="tearDown" is-config="true" duration-ms="161" started-at="2014-04-22T17:26:07Z" finished-at="2014-04-22T17:26:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

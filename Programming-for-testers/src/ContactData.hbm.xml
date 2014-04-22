@@ -5,16 +5,16 @@
  <id name="id" column="id" ></id>
  <property name="name" column="firstname" />
  <property name="lastname" column="lastname" />
- <property name="phone1" column="contact_phone1" />
- <property name="mail1" column="contact_mail1" />
- <property name="phone3" column="contact_phone3" />
- <property name="wphone1" column="contact_wphone1" />
- <property name="mail2" column="contact_mail2" />
- <property name="bday" column="contact_bday" />
- <property name="bmonth" column="contact_bmonth" />
- <property name="byear" column="contact_byear" />
- <property name="address2" column="contact_address2" />
- <property name="phone2" column="contact_phone2" />
+ <property name="phone1" column="home" />
+ <property name="mail1" column="email" />
+ <property name="phone3" column="mobile" />
+ <property name="wphone1" column="work" />
+ <property name="mail2" column="email2" />
+ <property name="bday" column="bday" />
+ <property name="bmonth" column="bmonth" />
+ <property name="byear" column="byear" />
+ <property name="address2" column="address2" />
+ <property name="phone2" column="phone2" />
  </class>
 </hibernate-mapping>
 
