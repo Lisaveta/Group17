@@ -38,10 +38,10 @@ public class ContactModificationTests extends TestBase{
 	app.getContactHelper().modifyContact(index, contact);
  
     //save new state
-	//SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
+	SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
     
-	SortedListOf<ContactData> newList 
-	= new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
+//	SortedListOf<ContactData> newList 
+//	= new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
 	
 	// compare states
 	assertThat(newList, equalTo(oldListBD.without(index).withAdded(contact)));

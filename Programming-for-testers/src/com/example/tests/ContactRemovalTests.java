@@ -19,10 +19,10 @@ public class ContactRemovalTests extends TestBase{
 				  new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
 
 		// подготовка тестовых данных
-		SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
+		//SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
    
 		Random rnd = new Random();
-		int index = rnd.nextInt(oldList.size()-1);
+		int index = rnd.nextInt(oldListBD.size()-1);
    
 	
 		// совершаем над ними экшн)))
@@ -30,10 +30,10 @@ public class ContactRemovalTests extends TestBase{
     
     
 		//save new state
-		// SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
+		 SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
    
-	  SortedListOf<ContactData> newList = 
-			  new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
+	  //SortedListOf<ContactData> newList = 
+		//	  new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
 
     // compare states
     assertThat(newList, equalTo(oldListBD.without(index)));
