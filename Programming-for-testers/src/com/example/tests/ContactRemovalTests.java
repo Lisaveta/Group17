@@ -12,24 +12,30 @@ public class ContactRemovalTests extends TestBase{
 
 	@Test
 	public void deleteSomeContact() {
- 		// save old state
+ 		
+		
+		// save old state получаем из БД
+		 SortedListOf<ContactData> oldListBD = 
+				  new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
+
+		// подготовка тестовых данных
 		SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
    
-   Random rnd = new Random();
-   int index = rnd.nextInt(oldList.size()-1);
+		Random rnd = new Random();
+		int index = rnd.nextInt(oldList.size()-1);
    
 	
-   // actions
-   app.getContactHelper().initContactModification(index).deleteContact();
+		// совершаем над ними экшн)))
+		app.getContactHelper().initContactModification(index).deleteContact();
     
     
-    //save new state
-  // SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
+		//save new state
+		// SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
    
 	  SortedListOf<ContactData> newList = 
 			  new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
 
     // compare states
-    assertThat(newList, equalTo(oldList.without(index)));
+    assertThat(newList, equalTo(oldListBD.without(index)));
  	}
 }

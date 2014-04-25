@@ -23,9 +23,15 @@ public class ContactModificationTests extends TestBase{
 	@Test(dataProvider = "contactsFromFile")
 	public void contactModificationTests(ContactData contact) throws Exception{
    
-	// save old state
+	
+		// save old state
+	SortedListOf<ContactData> oldListBD 
+		= new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());	
+		
+		//подготовка тестовых данных
 		SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
-
+		
+		//действия с системой
 	Random rnd = new Random();
 	int index = rnd.nextInt(oldList.size()-1);
 
@@ -38,7 +44,7 @@ public class ContactModificationTests extends TestBase{
 	= new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());
 	
 	// compare states
-	assertThat(newList, equalTo(oldList.without(index).withAdded(contact)));
+	assertThat(newList, equalTo(oldListBD.without(index).withAdded(contact)));
 	}
 }
 //сохранение старого состояния

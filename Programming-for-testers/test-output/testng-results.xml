@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16941" started-at="2014-04-22T10:41:15Z" finished-at="2014-04-22T10:41:32Z">
+  <suite name="Default suite" duration-ms="18974" started-at="2014-04-25T11:19:53Z" finished-at="2014-04-25T11:20:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16941" started-at="2014-04-22T10:41:15Z" finished-at="2014-04-22T10:41:32Z">
+    <test name="Default test" duration-ms="18974" started-at="2014-04-25T11:19:53Z" finished-at="2014-04-25T11:20:12Z">
       <class name="com.example.tests.ContactRemovalTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactRemovalTests@376cc3]" name="setUp" is-config="true" duration-ms="7297" started-at="2014-04-22T17:41:15Z" finished-at="2014-04-22T17:41:22Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactRemovalTests@c5aba9]" name="setUp" is-config="true" duration-ms="9848" started-at="2014-04-25T18:19:53Z" finished-at="2014-04-25T18:20:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deleteSomeContact()[pri:0, instance:com.example.tests.ContactRemovalTests@376cc3]" name="deleteSomeContact" duration-ms="9471" started-at="2014-04-22T17:41:22Z" finished-at="2014-04-22T17:41:32Z">
+        <test-method status="PASS" signature="deleteSomeContact()[pri:0, instance:com.example.tests.ContactRemovalTests@c5aba9]" name="deleteSomeContact" duration-ms="8942" started-at="2014-04-25T18:20:03Z" finished-at="2014-04-25T18:20:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteSomeContact -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactRemovalTests@376cc3]" name="tearDown" is-config="true" duration-ms="164" started-at="2014-04-22T17:41:32Z" finished-at="2014-04-22T17:41:32Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactRemovalTests@c5aba9]" name="tearDown" is-config="true" duration-ms="177" started-at="2014-04-25T18:20:12Z" finished-at="2014-04-25T18:20:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
