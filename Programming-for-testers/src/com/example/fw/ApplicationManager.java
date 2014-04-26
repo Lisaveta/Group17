@@ -8,13 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class ApplicationManager {
-	private static ApplicationManager singleton;
-	public static ApplicationManager getInstance(){
-		if (singleton == null) {
-			singleton = new ApplicationManager();
-		}
-		return singleton;
-	}
 	
 	public WebDriver driver;
 	public String baseUrl;
@@ -29,6 +22,8 @@ public class ApplicationManager {
 
 	public ApplicationManager(Properties properties) {
 	  this.properties = properties;
+	  model = new ApplicationModel();
+	  
 	  String browser = properties.getProperty("browser");
 	  if ("firefox".equals(browser)) {
 	  driver = new FirefoxDriver();
@@ -43,9 +38,14 @@ public class ApplicationManager {
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  driver.get(baseUrl);
 	}
+	
 	public void stop() {
 	    driver.quit();
 	  }	
+	public ApplicationModel getModel(){
+		return model;
+	}
+	
 	
 	public NavigationHelper navigateTo() {
 	if (navigationHelper == null) {

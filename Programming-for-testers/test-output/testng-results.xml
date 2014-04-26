@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48944" started-at="2014-04-26T03:38:24Z" finished-at="2014-04-26T03:39:13Z">
+  <suite name="Default suite" duration-ms="47268" started-at="2014-04-26T03:48:06Z" finished-at="2014-04-26T03:48:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48944" started-at="2014-04-26T03:38:24Z" finished-at="2014-04-26T03:39:13Z">
+    <test name="Default test" duration-ms="47268" started-at="2014-04-26T03:48:06Z" finished-at="2014-04-26T03:48:54Z">
       <class name="com.example.tests.ContactModificationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactModificationTests@d8f5e8]" name="setUp" is-config="true" duration-ms="8899" started-at="2014-04-26T10:38:24Z" finished-at="2014-04-26T10:38:33Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactModificationTests@d8f5e8]" name="setUp" is-config="true" duration-ms="6450" started-at="2014-04-26T10:48:06Z" finished-at="2014-04-26T10:48:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="contactModificationTests(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactModificationTests@d8f5e8]" name="contactModificationTests" duration-ms="39742" started-at="2014-04-26T10:38:33Z" data-provider="contactsFromFile" finished-at="2014-04-26T10:39:13Z">
+        <test-method status="PASS" signature="contactModificationTests(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactModificationTests@d8f5e8]" name="contactModificationTests" duration-ms="40478" started-at="2014-04-26T10:48:13Z" data-provider="contactsFromFile" finished-at="2014-04-26T10:48:54Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactModificationTests -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactModificationTests@d8f5e8]" name="tearDown" is-config="true" duration-ms="180" started-at="2014-04-26T10:39:13Z" finished-at="2014-04-26T10:39:13Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactModificationTests@d8f5e8]" name="tearDown" is-config="true" duration-ms="214" started-at="2014-04-26T10:48:54Z" finished-at="2014-04-26T10:48:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
