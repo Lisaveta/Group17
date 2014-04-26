@@ -24,6 +24,7 @@ public class ApplicationManager {
 	private ContactHelper contactHelper;
 	private Properties properties;
 	private HibernateHelper hibernateHelper;
+	private ApplicationModel model;
 	
 
 	public ApplicationManager(Properties properties) {
@@ -42,13 +43,6 @@ public class ApplicationManager {
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  driver.get(baseUrl);
 	}
-
-
-	public ApplicationManager() {
-		// TODO Auto-generated constructor stub
-	}
-
-
 	public void stop() {
 	    driver.quit();
 	  }	
