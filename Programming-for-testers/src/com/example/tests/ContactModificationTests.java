@@ -29,7 +29,7 @@ public class ContactModificationTests extends TestBase{
 		= new SortedListOf<ContactData>(app.getHibernateHelper().listContacts());	
 		
 		//подготовка тестовых данных
-		SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
+	SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
 		
 		//действия с системой
 	Random rnd = new Random();

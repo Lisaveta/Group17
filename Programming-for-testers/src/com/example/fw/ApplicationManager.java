@@ -23,7 +23,7 @@ public class ApplicationManager {
 	private GroupHelper groupHelper;
 	private ContactHelper contactHelper;
 	private Properties properties;
-	private Object hibernateHelper;
+	private HibernateHelper hibernateHelper;
 	
 
 	public ApplicationManager(Properties properties) {
