@@ -32,13 +32,13 @@ public class TestBase {
 		Properties props = new Properties();
 		props.load(new FileReader(configFile));
 		log.info("setUp start");
-		app = ApplicationManager.getInstance();
+		app = new ApplicationManager(props);
 	}
+
 	@AfterTest
 	public void tearDown() throws Exception {
-		log.info("tearDown start");
-		ApplicationManager.getInstance().stop();
-		log.info("tearDown end");
+			app.stop();
+		}
 	}
-}
+
 

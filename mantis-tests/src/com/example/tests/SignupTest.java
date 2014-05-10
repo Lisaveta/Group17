@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import com.example.fw.AccountHelper;
 import com.example.fw.JamesHelper;
 import com.example.fw.User;
+import com.opera.core.systems.scope.protos.WmProtos.OpenURLArg;
 
 
 public class SignupTest extends TestBase{
@@ -33,22 +34,22 @@ public class SignupTest extends TestBase{
 	
 	@Test
 	public void newUserShouldSignup(){
-				
+		
 		accHelper.signup(user);
 		accHelper.login(user);
 		assertThat(accHelper.loggedUser(), equalTo(user.login));
 	}
 
-	@Test
-	public void existingUserShouldNotSignup(){
-			try {	
-		accHelper.signup(user);
-			}catch (Exception e) {
-				assertThat(e.getMessage(), containsString(""));
-				return;
-			}
-			fail("Exception expected");
-	}
+//	@Test
+//	public void existingUserShouldNotSignup(){
+//			try {	
+//		accHelper.signup(user);
+//			}catch (Exception e) {
+//				assertThat(e.getMessage(), containsString(""));
+//				return;
+//			}
+//			fail("Exception expected");
+//	}
 
 	@AfterClass
 	public void deleteMailUser(){

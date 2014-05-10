@@ -18,7 +18,7 @@ public class AccountHelper extends WebDriverHelperBase{
 	}
 
 	public void signup(User user) {
-	openUrl("/");
+	openUrl("/signup_page.php");
 	click(By.cssSelector("span.bracket-link"));
 	type(By.name("username"), user.login);
 	type(By.name("email"), user.email);

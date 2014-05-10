@@ -14,8 +14,8 @@ public class MailHelper extends HelperBase{
 		super(applicationManager);
 	}
 		public String getNewMail(String user, String password) {
-			Properties props = System.getProperties();
-			Session session = Session.getDefaultInstance(props);
+			Properties properties = System.getProperties();
+			Session session = Session.getDefaultInstance(properties);
 			
 			Store store;
 			try {
