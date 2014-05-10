@@ -9,7 +9,6 @@ public class User {
 	public User setLogin(String login) {
 		this.login = login;
 		return this;
-
 }
 
 	public User setPassword(String password) {

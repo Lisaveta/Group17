@@ -1,8 +1,11 @@
 package com.example.fw;
 
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.mysql.jdbc.Driver;
 
@@ -10,7 +13,7 @@ public class ApplicationManager {
 	//singleton - единстенный экземпл€р
 	private static ApplicationManager singleton;
 	private Properties props;
-	private WebDriverHelper webDriverHelper;
+	private WebDriverHelperBase webDriverHelperBase;
 	private HibernateHelper hibernateHelper;
 	private AccountHelper accountHelper;
 	private MailHelper mailHelper;
@@ -41,13 +44,6 @@ public class ApplicationManager {
 			return hibernateHelper;
 	}
 
-	public WebDriverHelper getWebDriverHelper() {
-		if (webDriverHelper == null) {
-			webDriverHelper = new WebDriverHelper(this);
-	}
-			return webDriverHelper;
-	}
-
 	public AccountHelper getAccountHelper() {
 		if (accountHelper == null) {
 			accountHelper = new AccountHelper(this);
@@ -65,15 +61,30 @@ public class ApplicationManager {
 	}
 			return mailHelper;
 	}
-	public String getProperty(String string) {
-		// TODO Auto-generated method stub
-		return null;
+	public String getProperty(String key){
+		return props.getProperty(key);
 	}
 	public JamesHelper getJamesHelper() {
 		if (jamesHelper == null) {
 			jamesHelper = new JamesHelper(this);
 	}
 		return jamesHelper;
+	}
+	public WebDriver getDriver() {
+		if (driver == null){
+			String browser = props.getProperty("browser");
+			if ("firefox".equals(browser)) {
+				driver = new FirefoxDriver();
+		}else if ("ie".equals(browser)){
+				driver = new InternetExplorerDriver();
+		}else{
+				throw new Error("Unsupported browser" + browser);
+			}
+			browser = props.getProperty("baseUrl");
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			driver.get(browser);
+		}
+		return driver;
 	}
 }
 

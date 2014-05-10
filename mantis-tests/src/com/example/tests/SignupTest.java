@@ -1,24 +1,31 @@
 package com.example.tests;
 
-import static org.testng.Assert.*;
-
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+import org.junit.internal.runners.statements.Fail;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import com.example.fw.AccountHelper;
+import com.example.fw.JamesHelper;
 import com.example.fw.User;
+
 
 public class SignupTest extends TestBase{
 	
 	
 	public User user = new User().setLogin("testUser1").setPassword("123456")
-			.setEmail("testuser1@localhost");
-
+			.setEmail("testuser1@localhost.localdomain");
+	private JamesHelper james;
+	private AccountHelper accHelper;
+	
 	
 	@BeforeClass
 	public void createMailUser(){
-		if (! app.getJamesHelper().doesUserExist(user.login)) {
-		app.getJamesHelper().createUser(user.login, user.password);
+		james = app.getJamesHelper();
+		accHelper = app.getAccountHelper();
+		if (! james.doesUserExist(user.login)) {
+			james.createUser(user.login, user.password);
 		}
 	}
 	
@@ -26,16 +33,26 @@ public class SignupTest extends TestBase{
 	@Test
 	public void newUserShouldSignup(){
 				
-		app.getAccountHelper().signup(user);
-		pause(3000);
-		app.getAccountHelper().login(user);
-		assertThat(app.getAccountHelper().lopggedUser());
-		
+		accHelper.signup(user);
+		accHelper.login(user);
+		assertThat(accHelper.loggedUser(), equalTo(user.login));
 	}
+
+	@Test
+	public void existingUserShouldNotSignup(){
+			try {	
+		accHelper.signup(user);
+			}catch (Exception e) {
+				assertThat(e.getMessage(), containsString(""));
+				return;
+			}
+			fail("Exception expected");
+	}
+
 	@AfterClass
 	public void deleteMailUser(){
-		if (app.getJamesHelper().doesUserExist(user.login)) {
-			app.getJamesHelper().deleteUser(user.login);
+		if (james.doesUserExist(user.login)) {
+			james.deleteUser(user.login);
 		}
 	}
 

@@ -13,8 +13,6 @@ public class MailHelper extends HelperBase{
 	public MailHelper(ApplicationManager applicationManager) {
 		super(applicationManager);
 	}
-
-
 		public String getNewMail(String user, String password) {
 			Properties props = System.getProperties();
 			Session session = Session.getDefaultInstance(props);
