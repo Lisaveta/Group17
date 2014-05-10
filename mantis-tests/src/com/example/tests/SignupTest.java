@@ -1,5 +1,6 @@
 package com.example.tests;
-
+import static org.testng.Assert.*;
+import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 import org.junit.internal.runners.statements.Fail;
