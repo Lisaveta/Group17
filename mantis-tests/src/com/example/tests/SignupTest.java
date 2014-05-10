@@ -40,16 +40,16 @@ public class SignupTest extends TestBase{
 		assertThat(accHelper.loggedUser(), equalTo(user.login));
 	}
 
-//	@Test
-//	public void existingUserShouldNotSignup(){
-//			try {	
-//		accHelper.signup(user);
-//			}catch (Exception e) {
-//				assertThat(e.getMessage(), containsString(""));
-//				return;
-//			}
-//			fail("Exception expected");
-//	}
+	@Test
+	public void existingUserShouldNotSignup(){
+			try {	
+		accHelper.signup(user);
+			}catch (Exception e) {
+				assertThat(e.getMessage(), containsString(""));
+				return;
+			}
+			fail("Exception expected");
+	}
 
 	@AfterClass
 	public void deleteMailUser(){
