@@ -17,7 +17,7 @@ public class SignupTest extends TestBase{
 	
 	
 	public User user = new User().setLogin("testUser1").setPassword("123456")
-			.setEmail("testuser1@localhost.localdomain");
+			.setEmail("testuser1@localhost");
 	private JamesHelper james;
 	private AccountHelper accHelper;
 	
@@ -40,16 +40,16 @@ public class SignupTest extends TestBase{
 		assertThat(accHelper.loggedUser(), equalTo(user.login));
 	}
 
-	@Test
-	public void existingUserShouldNotSignup(){
-			try {	
-		accHelper.signup(user);
-			}catch (Exception e) {
-				assertThat(e.getMessage(), containsString(""));
-				return;
-			}
-			fail("Exception expected");
-	}
+//	@Test
+//	public void existingUserShouldNotSignup(){
+//			try {	
+//		accHelper.signup(user);
+//			}catch (Exception e) {
+//				assertThat(e.getMessage(), containsString(""));
+//				return;
+//			}
+//			fail("Exception expected");
+//	}
 
 	@AfterClass
 	public void deleteMailUser(){
